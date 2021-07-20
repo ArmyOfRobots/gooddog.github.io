@@ -61,8 +61,8 @@ defaults:
       comments: "true"
 
 # Serving
-url: "https://armyofrobots.github.io"
-baseurl: "/gooddog.github.io"
+url: "https://www.gooddog.ai"
+baseurl: ""
 
 # Includes
 include: ["_pages"]
