@@ -5,7 +5,7 @@ permalink: "/dobby/"
 ---
 
 <figure>
-    <img src="/images/dobby0_1.jpg" />
+    <img src="images/dobby0_1.jpg" />
     <figcaption>The first version of Dobby</figcaption>
 </figure>
 

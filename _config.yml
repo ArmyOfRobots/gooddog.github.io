@@ -3,8 +3,8 @@ name: GoodDog(.AI)
 job_title: Reinforcement Learning Robots
 email: jake@poz.nan.ski
 description: Let's build robots powered by SoTA Neural Networks and Reinforcement Learning.
-avatar: /logo.png
-favicon: /favicon.ico
+avatar: logo.png
+favicon: favicon.ico
 # twitter_handler: your_handler
 analytics_code: UA-XXXXXXX-2
 # disqus: your_disqus_site
