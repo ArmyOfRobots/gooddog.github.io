@@ -62,7 +62,7 @@ defaults:
 
 # Serving
 url: "https://armyofrobots.github.io"
-baseurl: "/gooddog.github.io/"
+baseurl: "/gooddog.github.io"
 
 # Includes
 include: ["_pages"]
