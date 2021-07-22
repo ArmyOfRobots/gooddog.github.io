@@ -9,6 +9,11 @@ favicon: /favicon.ico
 analytics_code: UA-XXXXXXX-2
 # disqus: your_disqus_site
 
+collections:
+  bumble:
+    - bumble/index.md
+    - bumble/bom.md
+
 # Social Accounts
 social_networks:
 -  { name: facebook, url: '' }
