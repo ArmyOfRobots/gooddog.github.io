@@ -40,3 +40,7 @@ in a keyboard and monitor, or by connecting to the exposed serial port: `screen 
 9. You should be able to SSH to your device: `ssh robot@192.168.55.1`
 
 
+NB: If your host computer is Ubuntu, you may experience some frequent connections and disconnections via the USB-Ethernet
+interface. To fix that, I recommend to disable the "connect automatically" for those Jetson connections within the
+provided Network Manager.
+
