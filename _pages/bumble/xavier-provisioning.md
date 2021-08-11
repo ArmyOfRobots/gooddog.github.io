@@ -39,6 +39,21 @@ in a keyboard and monitor, or by connecting to the exposed serial port: `screen 
 
 9. You should be able to SSH to your device: `ssh robot@192.168.55.1`
 
+10. Once you SSH in, you should do one last `apt-get update && apt-get upgrade`, and then disable a few services
+that should not be necessary (like the GUI and docker)
+```shell
+# Disable gnome/GUI login
+sudo systemctl set-default multi-user.target
+
+# Disable docker 
+sudo systemctl disable docker.service
+sudo systemctl disable docker.socket
+sudo systemctl disable containerd
+
+# Disable some other random crap you don't need
+sudo systemctl disable whoopsie
+```    
+
 
 NB: If your host computer is Ubuntu, you may experience some frequent connections and disconnections via the USB-Ethernet
 interface. To fix that, I recommend to disable the "connect automatically" for those Jetson connections within the
