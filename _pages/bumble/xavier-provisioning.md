@@ -59,3 +59,31 @@ NB: If your host computer is Ubuntu, you may experience some frequent connection
 interface. To fix that, I recommend to disable the "connect automatically" for those Jetson connections within the
 provided Network Manager.
 
+
+---
+
+**How to set up an I2S interface microphone with a Jetson Xavier.**
+
+If you purchase a https://www.adafruit.com/product/3421 microphone, then your robot will be able to listen to audio
+signals.
+
+I recommend to directly solder some female-female jumper cables (https://www.adafruit.com/product/266) to the microphone 
+breakout board, and then plug the connectors in the 40pin expansion header on the Jetson.
+
+![/images/i2smic1.jpg](/images/i2smic1.jpg)
+
+![/images/i2smic2.jpg](/images/i2smic2.jpg)
+
+*Connect according to the pinout below*
+
+| Jetson Xavier      | Mic Breakout |
+| ------------------ | ----------- |
+| Pin 17 (3.3V)         | 3V       |
+| Pin 20 (GND)          | GND      |
+| Pin 12 (I2S2_CLK)     | BCLK     |
+| Pin 38 (I2S_SDIN)     | DOUT     |
+| Pin 35 (I2S_FS)       | LRCL     |
+| Pin 39 (GND)          | SEL      |
+
+
+
