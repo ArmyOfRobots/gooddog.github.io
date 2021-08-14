@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "NVIDIA Jetson Xavier Provisioning"
-permalink: "/bumble/xavier-provisioning"
+permalink: "bumble/xavier-provisioning"
 order: 3
 ---
 
@@ -56,6 +56,13 @@ sudo systemctl disable containerd
 # Disable some other random crap you don't need
 sudo systemctl disable whoopsie
 ```    
+
+11. And finally, set up a wifi connection (you'll need an M.2 Wifi module, I recommend an Intel 8265, plus an 
+    externally connected antenna.)
+    
+```shell
+sudo nmcli -a d wifi connect [wifi_sssd]
+```
 
 
 NB: If your host computer is Ubuntu, you may experience some frequent connections and disconnections via the USB-Ethernet

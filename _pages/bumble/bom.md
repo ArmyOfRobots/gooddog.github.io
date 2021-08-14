@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Bumble v0.1 BOM"
-permalink: "/bumble/bom"
+permalink: "bumble/bom"
 order: 1
 ---
 
