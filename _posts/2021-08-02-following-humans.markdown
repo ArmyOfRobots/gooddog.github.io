@@ -19,7 +19,7 @@ Another downside, is that the left/right motion does not occur in all orientatio
 
 Running the sac-amber-snow-284-05632 checkpoint.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kxRaRgLclSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S2sX_xu_PEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Project Log:
  - Fixed bug with calculating the reward function from Yolo intermediate frame.
