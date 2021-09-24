@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Open Sourcing"
+date:   2021-09-24 14:03:00 -0700
+categories: update
+---
+
+The code for GoodDog.ai is now fully open source.
+
+[rossac - SAC training from ROS Bag files](https://github.com/GoodDogAI/rossac]+)
+
+[bumble - Run ONNX models in ROS](https://github.com/GoodDogAI/bumble)
+
+<br/>
+
+
+Project Log:
+ - Ability to have an arbitrary length history buffer to allow the RL network to have ability to see events in the past.
+ - Currently trying just last 4 to 10 entries (a few seconds) worth of history, but some RNNs are possible with this approac
+ - New YoloV5 checkpoints with higher accuracy, and fewer custom steps needed to update
+ - Ability to inference YOLO's ONNX export on GPU when doing offline training  
+ - Progress on "rewardbutton" bluetooth connection plus Android app
+
+
