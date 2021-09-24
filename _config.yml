@@ -22,7 +22,7 @@ social_networks:
 -  { name: google-plus, url: '' }
 -  { name: linkedin, url: '' }
 -  { name: skype, url: '' }
--  { name: github, url: '' }
+-  { name: github, url: 'https://github.com/GoodDogAI/rossac' }
 -  { name: codepen, url: '' }
 -  { name: stack-overflow, url: '' }
 -  { name: dribbble, url: '' }
