@@ -7,7 +7,7 @@ categories: update
 
 The code for GoodDog.ai is now fully open source.
 
-[rossac - SAC training from ROS Bag files](https://github.com/GoodDogAI/rossac]+)
+[rossac - SAC training from ROS Bag files](https://github.com/GoodDogAI/rossac)
 
 [bumble - Run ONNX models in ROS](https://github.com/GoodDogAI/bumble)
 
