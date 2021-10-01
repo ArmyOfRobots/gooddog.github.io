@@ -85,6 +85,14 @@ provided Network Manager.
    https://github.com/jetsonhacks/installRealSenseSDK/blob/master/installLibrealsense.sh
 6. Then, install the Intel Real Sense ROS package from source:
 https://github.com/IntelRealSense/realsense-ros#step-2-install-intel-realsense-ros-from-sources
+
+Note, you will need to make a soft link from `opencv4` to `opencv` for the package to compile properly.
+
+```bash
+cd /usr/include
+sudo ln -s opencv4 opencv
+```
+
 7. Run `catkin_make`
 8. You should be able to start the robot with `roslaunch mainbot brain.launch`
 
