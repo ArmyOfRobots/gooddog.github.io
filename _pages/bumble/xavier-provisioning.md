@@ -79,12 +79,14 @@ provided Network Manager.
    1. http://wiki.ros.org/catkin/Tutorials/create_a_workspace
 3. Be sure to source the workspace from your `~/.bashrc` file.
 4. Clone the https://github.com/GoodDogAI/bumble repo into `~/catkin_ws/src`
-5. You're going to want to install the Intel Realsense drivers for ROS, using the latest version of the library. (Not just the apt-get install version which can be out of date)
+5. You're going to want to install the Intel Realsense base Linux drivers, using the latest version of the library. (Not just the apt-get install version which can be out of date)
    However, it's okay to use the user-mode UVC library.
 
    https://github.com/jetsonhacks/installRealSenseSDK/blob/master/installLibrealsense.sh
-6. Run `catkin_make`
-7. You should be able to start the robot with `roslaunch mainbot brain.launch`
+6. Then, install the Intel Real Sense ROS package from source:
+https://github.com/IntelRealSense/realsense-ros#step-2-install-intel-realsense-ros-from-sources
+7. Run `catkin_make`
+8. You should be able to start the robot with `roslaunch mainbot brain.launch`
 
 ---
 
