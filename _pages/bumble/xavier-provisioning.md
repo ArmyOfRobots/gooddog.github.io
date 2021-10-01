@@ -69,6 +69,18 @@ NB: If your host computer is Ubuntu, you may experience some frequent connection
 interface. To fix that, I recommend disabling the "connect automatically" feature for those Jetson connections within the
 provided Network Manager.
 
+---
+
+** How to set up ROS and a Catkin Workspace **
+
+1. Follow the basic instructions to set up ROS Melodic (the only supported version for Ubuntu 18.04) from the official docs:
+   1. http://wiki.ros.org/melodic/Installation/Ubuntu
+2. Create a catkin workspace with the official instructions
+   1. http://wiki.ros.org/catkin/Tutorials/create_a_workspace
+3. Be sure to source the workspace from your `~/.bashrc` file.
+4. Clone the https://github.com/GoodDogAI/bumble repo into `~/catkin_ws/src`
+5. Run `catkin_make`
+6. You should be able to start the robot with `roslaunch mainbot brain.launch`
 
 ---
 
