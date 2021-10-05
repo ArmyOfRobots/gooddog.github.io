@@ -50,7 +50,7 @@ Double up the 3.3V, Ground, MISO, MOSI, CLK connections from both encoders into 
 and then separate out the CS line from each encoder on it's own pin.
 
 <figure>
-    <img src="{{ site.baseurl | prepend: site.url }}/images/as5048_encoder_pinout.png" />
+    <img src="{{ site.baseurl | prepend: site.url }}/images/encoder_full_pinout.jpg" />
     <figcaption>Wiring for encoder module.</figcaption>
 </figure>
 
@@ -65,4 +65,12 @@ and then separate out the CS line from each encoder on it's own pin.
     <figcaption>Pinout map</figcaption>
 </figure>
 
+So, what you need to do is map the following pins, reading left to right
+ - GND ⇨ GND
+ - 5V ⇨ 5V
+ - MISO ⇨ RC_SER_RX/RC_ROLL
+ - MOSI ⇨ RC_PITCH
+ - CLK ⇨ RC_SER_TX/RC_YAW
+ - CS (pitch motor) ⇨ AUX2
+ - CS (yaw motor) ⇨ FC_ROLL
 
