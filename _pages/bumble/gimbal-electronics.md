@@ -30,4 +30,16 @@ The cost is actually similar to a servo based pan-tilt head, if you are using ni
  - 2x9 Male Connector Housing
 
 
+***Encoder Wiring***
+
+ The AS5048A Encoder connects to the SimpleBGC using a SPI interface. That means
+ 6 connections per board: 3.3V, Ground, MISO, MOSI, CLK, and CS. Each of the two
+ encoders will share most of those connections, and only have a separate CS line.
+
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/SBGC_Tiny_C_Flat_Top_legend.jpg" />
+    <figcaption>Wiring diagram for Simple BGC Tiny Rev C.</figcaption>
+</figure>
+
 

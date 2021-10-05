@@ -123,6 +123,7 @@
 			ul, ol { margin: 15px 0;
 				ul, ol { padding: 0 0 0 20px; }
 				li { margin: 5px 0;
+					margin-left: 2em;
 					& > code { font-size: 14px; padding: 3px 6px; background: $background-color; border: 1px solid $grey-color-lightest; }
 				}
 			}
