@@ -74,3 +74,7 @@ So, what you need to do is map the following pins, reading left to right
  - CS (pitch motor) ⇨ AUX2
  - CS (yaw motor) ⇨ FC_ROLL
 
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/final_encoder_connector.JPG" />
+    <figcaption>The final connector should look like this.</figcaption>
+</figure>
