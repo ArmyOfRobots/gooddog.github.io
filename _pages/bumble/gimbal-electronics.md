@@ -50,7 +50,7 @@ Double up the 3.3V, Ground, MISO, MOSI, CLK connections from both encoders into 
 and then separate out the CS line from each encoder on it's own pin.
 
 <figure>
-    <img src="{{ site.baseurl | prepend: site.url }}/images/CatchEB15.jpg" height="300px" />
+    <img src="{{ site.baseurl | prepend: site.url }}/images/as5048_encoder_pinout.png" />
     <figcaption>Wiring for encoder module.</figcaption>
 </figure>
 
