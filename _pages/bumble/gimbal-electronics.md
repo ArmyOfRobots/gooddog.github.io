@@ -40,7 +40,7 @@ The first thing you'll need to do, is open up the encoder, and replace the 3-pin
 cable with the full 6 pin SPI-cable. Both cables should be included with the motor,
 and it's just a matter of opening the case and replacing it.
 
-<figure>
+<figure style="height: 50%">
     <img src="{{ site.baseurl | prepend: site.url }}/images/encoder_plug.png" />
     <figcaption>Plug in the JST-style connector and remount the encoder in the casing</figcaption>
 </figure>
