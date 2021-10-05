@@ -36,10 +36,33 @@ The cost is actually similar to a servo based pan-tilt head, if you are using ni
  6 connections per board: 3.3V, Ground, MISO, MOSI, CLK, and CS. Each of the two
  encoders will share most of those connections, and only have a separate CS line.
 
+The first thing you'll need to do, is open up the encoder, and replace the 3-pin 
+cable with the full 6 pin SPI-cable. Both cables should be included with the motor,
+and it's just a matter of opening the case and replacing it.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/encoder_plug.png" />
+    <figcaption>Plug in the JST-style connector and remount the encoder in the casing</figcaption>
+</figure>
+
+Next, you'll have to attach female crimp connectors to all of the pins coming from the encoder.
+Double up the 3.3V, Ground, MISO, MOSI, CLK connections from both encoders into one pin each,
+and then separate out the CS line from each encoder on it's own pin.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/CatchEB15.jpg" />
+    <figcaption>Wiring for encoder module.</figcaption>
+</figure>
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/SBGC_Tiny_C_Flat_Top_legend.jpg" />
     <figcaption>Wiring diagram for Simple BGC Tiny Rev C.</figcaption>
+</figure>
+
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/simplebgc_encoder_wiring.PNG" />
+    <figcaption>Pinout map</figcaption>
 </figure>
 
 
