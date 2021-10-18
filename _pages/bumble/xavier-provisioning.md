@@ -71,25 +71,30 @@ provided Network Manager.
 
 ---
 
-**How to set up the ODrive motor controller**
+**How to set up ROS and a Catkin Workspace**
 
-1. First, connect the battery to the DC power input, plus the AUX pin to the included resistor,
-the motors, and then the motor hall effect sensors on the ODrive. The hall effect sensors
-from most hoverboard motors are going to have the following connections:
+1. Follow the basic instructions to set up ROS Melodic (the only supported version for Ubuntu 18.04) from the official docs:
+   1. http://wiki.ros.org/melodic/Installation/Ubuntu
+2. Create a catkin workspace with the official instructions
+   1. http://wiki.ros.org/catkin/Tutorials/create_a_workspace
+3. Be sure to source the workspace from your `~/.bashrc` file.
+4. Clone the https://github.com/GoodDogAI/bumble repo into `~/catkin_ws/src`
+5. You're going to want to install the Intel Realsense base Linux drivers, using the latest version of the library. (Not just the apt-get install version which can be out of date)
+   However, it's okay to use the user-mode UVC library.
 
-| Wire Color   | Pin|
-| ------------ | ----------- | 
-| Red         | 5V       |
-| Yellow      | A      |
-| Blue        | B     |
-| Green       | Z     |
-| Black       | GND     |
+   https://github.com/jetsonhacks/installRealSenseSDK/blob/master/installLibrealsense.sh
+6. Then, install the Intel Real Sense ROS package from source:
+https://github.com/IntelRealSense/realsense-ros#step-2-install-intel-realsense-ros-from-sources
 
-2. The next step is to calibrate the motors, and it's easiest to just temporarily 
-connect a USB cable between the Jetson and the ODrive board for this step.
-Later, we will set up the CANBUS for reliable communications. 
+Note, you will need to make a soft link from `opencv4` to `opencv` for the package to compile properly.
 
-    Install the ODrivetool as per these instructions: [https://docs.odriverobotics.com/#downloading-and-installing-tools](https://docs.odriverobotics.com/#downloading-and-installing-tools)
+```bash
+cd /usr/include
+sudo ln -s opencv4 opencv
+```
+
+7. Run `catkin_make`
+8. You should be able to start the robot with `roslaunch mainbot brain.launch`
 
 ---
 
