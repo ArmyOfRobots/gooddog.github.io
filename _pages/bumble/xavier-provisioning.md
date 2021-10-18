@@ -69,6 +69,27 @@ NB: If your host computer is Ubuntu, you may experience some frequent connection
 interface. To fix that, I recommend disabling the "connect automatically" feature for those Jetson connections within the
 provided Network Manager.
 
+---
+
+**How to set up the ODrive motor controller**
+
+1. First, connect the battery to the DC power input, plus the AUX pin to the included resistor,
+the motors, and then the motor hall effect sensors on the ODrive. The hall effect sensors
+from most hoverboard motors are going to have the following connections:
+
+| Wire Color   | Pin|
+| ------------ | ----------- | 
+| Red         | 5V       |
+| Yellow      | A      |
+| Blue        | B     |
+| Green       | Z     |
+| Black       | GND     |
+
+2. The next step is to calibrate the motors, and it's easiest to just temporarily 
+connect a USB cable between the Jetson and the ODrive board for this step.
+Later, we will set up the CANBUS for reliable communications. 
+
+    Install the ODrivetool as per these instructions: [https://docs.odriverobotics.com/#downloading-and-installing-tools](https://docs.odriverobotics.com/#downloading-and-installing-tools)
 
 ---
 
