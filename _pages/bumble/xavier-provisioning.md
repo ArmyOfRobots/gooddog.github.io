@@ -124,9 +124,84 @@ Later, we will set up the CANBUS for reliable communications.
 pip3 install Cython
 sudo pip3 install --upgrade odrive matplotlib==3.2.2
 ```
-4. Follow the hoverboard guide [https://docs.odriverobotics.com/hoverboard](https://docs.odriverobotics.com/hoverboard)
+4. Run the instructions below to configure both hoverboard motors. They are adapted from [https://docs.odriverobotics.com/hoverboard](https://docs.odriverobotics.com/hoverboard)
+
+Note, if you run into a PHASE_RESISTANCE_OUT_OF_RANGE error, then you may need to increase the `resistance_calib_max_voltage` value.
+
 ```
+# Configure Motor 0
 odrv0.axis0.motor.config.pole_pairs = 15
+
+odrv0.axis0.motor.config.resistance_calib_max_voltage = 8 # Should be between 4-8 for most hoverboard motors
+odrv0.axis0.motor.config.requested_current_range = 25 #Requires config save and reboot
+odrv0.axis0.motor.config.current_control_bandwidth = 100
+odrv0.axis0.motor.config.torque_constant = 8.27 / 16 # Replace 16 with KV if you know it
+
+odrv0.axis0.encoder.config.mode = ENCODER_MODE_HALL
+odrv0.axis0.encoder.config.cpr = 90
+odrv0.axis0.encoder.config.calib_scan_distance = 150
+odrv0.config.gpio9_mode = GPIO_MODE_DIGITAL
+odrv0.config.gpio10_mode = GPIO_MODE_DIGITAL
+odrv0.config.gpio11_mode = GPIO_MODE_DIGITAL
+
+odrv0.axis0.encoder.config.bandwidth = 100
+odrv0.axis0.controller.config.pos_gain = 1
+odrv0.axis0.controller.config.vel_gain = 0.02 * odrv0.axis0.motor.config.torque_constant * odrv0.axis0.encoder.config.cpr
+odrv0.axis0.controller.config.vel_integrator_gain = 0.1 * odrv0.axis0.motor.config.torque_constant * odrv0.axis0.encoder.config.cpr
+odrv0.axis0.controller.config.vel_limit = 5
+odrv0.axis0.controller.config.control_mode = CONTROL_MODE_VELOCITY_CONTROL
+
+odrv0.save_configuration()
+odrv0.reboot()
+
+# Now, calibrate the motor, then the hall effect sensors for that motor
+odrv0.axis0.requested_state = AXIS_STATE_MOTOR_CALIBRATION
+odrv0.axis0.motor.config.pre_calibrated = True
+
+odrv0.axis0.requested_state = AXIS_STATE_ENCODER_HALL_POLARITY_CALIBRATION
+odrv0.axis0.requested_state = AXIS_STATE_ENCODER_OFFSET_CALIBRATION
+odrv0.axis0.encoder.config.pre_calibrated = True
+
+odrv0.save_configuration()
+odrv0.reboot()
+
+# Repeat the configuration for the second motor
+odrv0.axis1.motor.config.pole_pairs = 15
+
+odrv0.axis1.motor.config.resistance_calib_max_voltage = 8 # Should be between 4-8 for most hoverboard motors
+odrv0.axis1.motor.config.requested_current_range = 25 #Requires config save and reboot
+odrv0.axis1.motor.config.current_control_bandwidth = 100
+odrv0.axis1.motor.config.torque_constant = 8.27 / 16 # Replace 16 with KV if you know it
+
+odrv0.axis1.encoder.config.mode = ENCODER_MODE_HALL
+odrv0.axis1.encoder.config.cpr = 90
+odrv0.axis1.encoder.config.calib_scan_distance = 150
+odrv0.config.gpio12_mode = GPIO_MODE_DIGITAL
+odrv0.config.gpio13_mode = GPIO_MODE_DIGITAL
+odrv0.config.gpio14_mode = GPIO_MODE_DIGITAL
+
+odrv0.axis1.encoder.config.bandwidth = 100
+odrv0.axis1.controller.config.pos_gain = 1
+odrv0.axis1.controller.config.vel_gain = 0.02 * odrv0.axis1.motor.config.torque_constant * odrv0.axis1.encoder.config.cpr
+odrv0.axis1.controller.config.vel_integrator_gain = 0.1 * odrv0.axis1.motor.config.torque_constant * odrv0.axis1.encoder.config.cpr
+odrv0.axis1.controller.config.vel_limit = 5
+odrv0.axis1.controller.config.control_mode = CONTROL_MODE_VELOCITY_CONTROL
+
+odrv0.save_configuration()
+odrv0.reboot()
+
+# And repeat the calibration steps for the second motor
+odrv0.axis1.requested_state = AXIS_STATE_MOTOR_CALIBRATION
+odrv0.axis1.motor.config.pre_calibrated = True
+
+odrv0.axis1.requested_state = AXIS_STATE_ENCODER_HALL_POLARITY_CALIBRATION
+odrv0.axis1.requested_state = AXIS_STATE_ENCODER_OFFSET_CALIBRATION
+odrv0.axis1.encoder.config.pre_calibrated = True
+
+odrv0.save_configuration()
+odrv0.reboot()
+
+
 
 ```
 
