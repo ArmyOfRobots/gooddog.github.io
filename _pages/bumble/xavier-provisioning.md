@@ -14,7 +14,7 @@ Thankfully, they have a docker image that you can use for flashing.
 Instructions based on these: https://docs.nvidia.com/sdk-manager/docker-containers/index.html
 
 1. Download the image from https://developer.nvidia.com/nvidia-sdk-manager-docker-image
-   (As of August 2021, we are using SDK Manager version 1.6, and Jetson 4.6)   
+   (As of August 2021, we are using SDK Manager version 1.7, and Jetson 4.6: sdkmanager-1.7.0.8846_docker)   
 
 2. From a terminal, load the Docker image: 
 
@@ -27,7 +27,7 @@ Instructions based on these: https://docs.nvidia.com/sdk-manager/docker-containe
    
 5. Connect the provided power cable to your Jetson Xavier board, and connect the USB C port that's next to the
    three power buttons to your computer. Then, boot the Jetson into Recovery mode by pressing and holding the
-   middle button, while pressing the outer power button.
+   inner most "recovery" button, while pressing the outer power button.
    
 6. If that checks out, then you want the latest `JETSON_AGX_XAVIER_TARGETS` as follows:
 ```shell
@@ -130,11 +130,13 @@ Note, if you run into a PHASE_RESISTANCE_OUT_OF_RANGE error, then you may need t
 
 ```
 # Configure Motor 0
+odrv0.config.enable_brake_resistor = True
 odrv0.axis0.motor.config.pole_pairs = 15
 
 odrv0.axis0.motor.config.resistance_calib_max_voltage = 8 # Should be between 4-8 for most hoverboard motors
 odrv0.axis0.motor.config.requested_current_range = 25 #Requires config save and reboot
 odrv0.axis0.motor.config.current_control_bandwidth = 100
+odrv0.axis0.motor.config.current_lim = 5
 odrv0.axis0.motor.config.torque_constant = 8.27 / 16 # Replace 16 with KV if you know it
 
 odrv0.axis0.encoder.config.mode = ENCODER_MODE_HALL
@@ -148,7 +150,8 @@ odrv0.axis0.encoder.config.bandwidth = 100
 odrv0.axis0.controller.config.pos_gain = 1
 odrv0.axis0.controller.config.vel_gain = 0.02 * odrv0.axis0.motor.config.torque_constant * odrv0.axis0.encoder.config.cpr
 odrv0.axis0.controller.config.vel_integrator_gain = 0.1 * odrv0.axis0.motor.config.torque_constant * odrv0.axis0.encoder.config.cpr
-odrv0.axis0.controller.config.vel_limit = 5
+odrv0.axis0.controller.config.vel_limit = 2
+odrv0.axis0.controller.config.vel_limit_tolerance = 2
 odrv0.axis0.controller.config.control_mode = CONTROL_MODE_VELOCITY_CONTROL
 
 odrv0.save_configuration()
@@ -171,6 +174,7 @@ odrv0.axis1.motor.config.pole_pairs = 15
 odrv0.axis1.motor.config.resistance_calib_max_voltage = 8 # Should be between 4-8 for most hoverboard motors
 odrv0.axis1.motor.config.requested_current_range = 25 #Requires config save and reboot
 odrv0.axis1.motor.config.current_control_bandwidth = 100
+odrv0.axis1.motor.config.current_lim = 5
 odrv0.axis1.motor.config.torque_constant = 8.27 / 16 # Replace 16 with KV if you know it
 
 odrv0.axis1.encoder.config.mode = ENCODER_MODE_HALL
@@ -184,7 +188,8 @@ odrv0.axis1.encoder.config.bandwidth = 100
 odrv0.axis1.controller.config.pos_gain = 1
 odrv0.axis1.controller.config.vel_gain = 0.02 * odrv0.axis1.motor.config.torque_constant * odrv0.axis1.encoder.config.cpr
 odrv0.axis1.controller.config.vel_integrator_gain = 0.1 * odrv0.axis1.motor.config.torque_constant * odrv0.axis1.encoder.config.cpr
-odrv0.axis1.controller.config.vel_limit = 5
+odrv0.axis1.controller.config.vel_limit = 2
+odrv0.axis1.controller.config.vel_limit_tolerance = 2
 odrv0.axis1.controller.config.control_mode = CONTROL_MODE_VELOCITY_CONTROL
 
 odrv0.save_configuration()
