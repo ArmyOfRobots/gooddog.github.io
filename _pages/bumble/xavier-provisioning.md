@@ -98,7 +98,13 @@ sudo ln -s opencv4 opencv
 ```
 
 7. Run `catkin_make`
-8. You should be able to start the robot with `roslaunch mainbot brain.launch`
+8. Include a line
+```
+source /home/robot/catkin_ws/devel/setup.bash
+```
+at the bottom of your ~/.bashrc file so that your catkin workspace can be properly detected by ROS.
+
+10. You should be able to start the robot with `roslaunch mainbot brain.launch`
 
 ---
 
