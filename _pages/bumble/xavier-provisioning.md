@@ -86,6 +86,10 @@ provided Network Manager.
 6. Then, install the Intel Real Sense ROS package from source:
 https://github.com/IntelRealSense/realsense-ros#step-2-install-intel-realsense-ros-from-sources
 
+```bash
+# If you get any build errors, you'll also need some extra ros packages
+sudo apt install ros-melodic-cv-bridge ros-melodic-image-transport ros-melodic-tf ros-melodic-ddynamic-reconfigure ros-melodic-diagnostic-updater
+```
 Note, you will need to make a soft link from `opencv4` to `opencv` for the package to compile properly.
 
 ```bash
