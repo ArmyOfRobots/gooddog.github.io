@@ -108,6 +108,25 @@ at the bottom of your ~/.bashrc file so that your catkin workspace can be proper
 
 ---
 
+**How to set up connection to the Simple BGC controller**
+
+There are a few steps needed to get the Simple BGC controller to be able to talk back to the Jetson Xavier via the
+integrated UART.
+
+```bash
+# Disable the nvgetty service, which by default takes over the UART on the 40 pin connector
+sudo systemctl disable nvgetty.service
+
+# Add the default "robot" user to the tty and dialout groups on linux
+sudo usermod -a -G tty robot
+sudo usermod -a -G dialout robot
+
+# Set a UDev rule so that the /dev/ttyTHS0 port is accessible to the proper group
+sudo -s
+echo 'SUBSYSTEM=="tty", GROUP="tty", MODE="0660"' > /etc/udev/rules.d/99-user-tty.rules
+```
+
+---
 
 **How to set up the ODrive motor controller**
 
