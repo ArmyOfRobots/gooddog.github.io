@@ -125,6 +125,32 @@ sudo usermod -a -G dialout robot
 sudo -s
 echo 'SUBSYSTEM=="tty", GROUP="tty", MODE="0660"' > /etc/udev/rules.d/99-user-tty.rules
 ```
+---
+
+**How to set up and format a Micro SD Card**
+
+It helps to have a huge 128GB or bigger MicroSD card to store the recordings of your robot's experiences.
+You'll want one with "C10, U3, V30, A2" or similar specs, with a good consistent writing rate.
+
+```bash
+# Format the card as ext4 for good performance on linux
+sudo lsblk # Find your card device name, usually it's /dev/mmcblk1p1
+sudo mkfs.ext4 /dev/mmcblk1p1 # Format as ext4
+
+sudo nano /etc/fstab
+# Add the following line at the bottom
+#/dev/mmcblk1p1       /media/card           ext4           defaults,nofail              0 0
+
+# Make a place to mount it in /media/card
+sudo mkdir /media/card
+sudo chown robot /media/card
+sudo chgrp robot /media/card
+
+# Check that your fstab worked
+sudo mount -a
+
+```
+
 
 ---
 
