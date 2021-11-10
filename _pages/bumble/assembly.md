@@ -26,21 +26,30 @@ Slicing settings needed:
  - 4 walls
  - Supports are needed on some parts, but it's doable with standard breakaway supports.
 
-1. Body Bottom
+*Body Bottom*
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/body_bottom_supports.PNG" />
     <figcaption>Supports will be needed where the caster wheel attaches, and under the motor mounts, but be sure to use "support blocker" in your slicer to suppress it everywhere else.</figcaption>
 </figure>
 
-2. Body Top
+*Body Top*
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/body_top_supports.PNG" />
     <figcaption>Supports will be needed on the underside where the antennas and head attaches, and by the microphone mount, but be sure to use "support blocker" in your slicer to suppress it everywhere else.</figcaption>
 </figure>
 
-3. Body Caster Wheel + Motor Mounts
+*Body Caster Wheel + Motor Mount*
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/body_rest.PNG" />
-    <figcaption>The rest of the motor mounting and caster wheel mounting parts should be printed as shown, with no supports necessary.</figcaption>
+    <figcaption>The rest of the motor mounting and caster wheel mounting parts should be printed as shown, with standard breakaway supports.</figcaption>
 </figure>
+
+*Head*
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/head_supports.PNG" />
+    <figcaption>All four of the head components can be printed on one plate. I recommend to print in the orientations shown for the strongest possible prints.
+        Only the main "Camera bracket" will need supports, and just go with what your slicer recommends. It's a bit tough to remove, but this is the most complicated part in the assembly.
+    </figcaption>
+</figure>
+
 ---
