@@ -32,7 +32,11 @@ Slicing settings needed:
     <figcaption>Supports will be needed where the caster wheel attaches, and under the motor mounts, but be sure to use "support blocker" in your slicer to suppress it everywhere else.</figcaption>
 </figure>
 
-3. 
+2. Body Top
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/body_top_supports.PNG" />
+    <figcaption>Supports will be needed on the underside where the antennas and head attaches, and by the microphone mount, but be sure to use "support blocker" in your slicer to suppress it everywhere else.</figcaption>
+</figure>
 
 
 ---
