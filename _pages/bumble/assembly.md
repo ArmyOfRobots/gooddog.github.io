@@ -26,6 +26,8 @@ Slicing settings needed:
  - 4 walls
  - Supports are needed on some parts, but it's doable with standard breakaway supports.
 
+Note: If you are using Ultimaker Cura as your slicer.
+
 *Body Bottom*
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/body_bottom_supports.PNG" />
