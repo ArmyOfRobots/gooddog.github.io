@@ -26,7 +26,7 @@ Slicing settings needed:
  - 4 walls
  - Supports are needed on some parts, but it's doable with standard breakaway supports.
 
-Note: If you are using Ultimaker Cura as your slicer.
+Note: If you are using Ultimaker Cura as your slicer, then you can use the same settings we used with the [files here](https://github.com/GoodDogAI/bumble-hardware/tree/main/cura).
 
 *Body Bottom*
 <figure>
