@@ -61,6 +61,7 @@ Note: If you are using Ultimaker Cura as your slicer, then you can use the same 
 Here are the required fasteners to assemble the robot. I recommend to get a generic M3 and M4 hex cap kit so that you
 have a bunch of sizes to choose from and make adjustments and hacks as necessary.
 
+
 | #  | Type                        | Size     | Q-TY | Comment                                                   |
 |----|-----------------------------|----------|------|-----------------------------------------------------------|
 | 1  | Button Head Hex Drive Screw | M2.5 x 5 | 2    | Microphone mount                                          |
@@ -79,6 +80,8 @@ have a bunch of sizes to choose from and make adjustments and hacks as necessary
 | 14 | Hex Nut                     | M4       | 10   | Wheels clamps (6), Case connection (4)                    |
 | 15 | Zip ties short for rires    |          | 16   | Head clip (2), Body clip (14)                             |
 | 16 | Zip ties long               | 300mm    | 2    | Battery mount                                             |
+
+
 ---
 
 **Bottom Plate Assembly**
