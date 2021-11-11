@@ -19,12 +19,12 @@ That's a total of 9 parts, two of which are the gigantic case top and bottom cas
 I have printed everything on an [Ultimaker 2+](https://ultimaker.com/) using
 [Yellow Tough PLA](https://www.matterhackers.com/store/l/pro-series-tough-pla-filament/sk/MS59VUVR).
 
-Any printer with a 20x20cm build plate should work just as well, but you should expect around 40 hours of total print time and ~500g of material necessary.
+Any printer with a 20x20cm build plate should work just as well, but you should expect around 60 hours of total print time and ~500g of material necessary.
 
 Slicing settings needed:
  - 20% gyroid infill
  - 4 walls
- - Supports are needed on some parts, but it's doable with standard breakaway supports.
+ - Supports are needed on some parts, but it's doable with standard supports on a single extrusion printer.
 
 Note: If you are using Ultimaker Cura as your slicer, then you can use the same settings we used with the [files here](https://github.com/GoodDogAI/bumble-hardware/tree/main/cura).
 
@@ -55,3 +55,35 @@ Note: If you are using Ultimaker Cura as your slicer, then you can use the same 
 </figure>
 
 ---
+
+**Fasteners**
+
+Here are the required fasteners to assemble the robot. I recommend to get a generic M3 and M4 hex cap kit so that you
+have a bunch of sizes to choose from and make adjustments and hacks as necessary.
+
+| #  | Type                        | Size     | Q-TY | Comment                                                   |
+|----|-----------------------------|----------|------|-----------------------------------------------------------|
+| 1  | Button Head Hex Drive Screw | M2.5 x 5 | 2    | Microphone mount                                          |
+| 2  | Button Head Hex Drive Screw | M3 x 6   | 2    | BaseCam PCB mount                                         |
+| 3  | Button Head Hex Drive Screw | M3 x 8   | 2    | Camera PCB                                                |
+| 4  | Button Head Hex Drive Screw | M3 x 10  | 9    | ODrive mount (4), Terminal mount (2), Head connection (3) |
+| 5  | Button Head Hex Drive Screw | M3 x 16  |      | Charging plug mount                                       |
+| 6  | Button Head Hex Drive Screw | M3 x 25  | 3    | Pololu wheel mount                                        |
+| 7  | Button Head Hex Drive Screw | M4 x 8   | 2    | Camera mount                                              |
+| 8  |                             |          |      |                                                           |
+| 9  | Socket Head Screw           | M2.5 x 5 | 16   | Motors mount                                              |
+| 10 | Socket Head Screw           | M4 x 8   | 2    | Power supply mount                                        |
+| 11 | Socket Head Screw           | M4 x 16  | 4    | Casae connection                                          |
+| 12 | Socket Head Screw           | M4 x 40  | 6    | Wheels clamps                                             |
+| 13 | Hex Nut                     | M3       | 4    | Pololu wheel mount (3), Charging plug mount (1)           |
+| 14 | Hex Nut                     | M4       | 10   | Wheels clamps (6), Case connection (4)                    |
+| 15 | Zip ties short for rires    |          | 16   | Head clip (2), Body clip (14)                             |
+| 16 | Zip ties long               | 300mm    | 2    | Battery mount                                             |
+---
+
+**Bottom Plate Assembly**
+
+Once you have printed all the parts, you can start assembly.
+
+1. Attach the motors to the motor mounts. You'll want the flat part of the
+hoverboard motor shaft to go against the bottom of the plate. And to screw everything in with M4x40 hex cap screws.
