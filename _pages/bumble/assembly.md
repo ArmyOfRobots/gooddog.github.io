@@ -144,3 +144,17 @@ you will see the `ERROR_ILLEGAL_HALL_STATE` condition.
             each motor sensor input.
     </figcaption>
 </figure>
+
+Mount the ODrive to the mounting posts at the front of the robot. I use M3x10 button head screws, they work
+perfectly for this application.
+
+You can use [this USB C to Micro-B cable](https://www.amazon.com/gp/product/B075VRQ6VR/) which has the
+perfect length and connectors for this size of robot.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_mounted.jpg" />
+    <figcaption>
+        I recommend some inexpensive ceramic capacitor kit from Amazon. Just solder on to the A, B, and Z terminals to ground on
+            each motor sensor input.
+    </figcaption>
+</figure>
