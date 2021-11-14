@@ -160,11 +160,21 @@ perfect length and connectors for this size of robot.
     </figcaption>
 </figure>
 
-Prepare the Terminal Block
+Build the Terminal Block
+
+The handiest way to attach relatively high current wiring in a safe and easy manner is with
+"Anderson PowerPole" brand connectors. You can get this board built and shipped with [jlcpcb.com](https://www.jlcpcb.com) 
+for around $15, and it's very handy for future projects.
+
+Instructions:
+1. Download the [Gerber Files](https://github.com/GoodDogAI/bumble-hardware/raw/main/terminal_block/5x%20Anderson%20Distribution%20Board%20v39_2021-10-22.zip)
+2. Go to [jlcpcb.com](https://www.jlcpcb.com) and order it. You should expect to pay around $2, plus $10 shipping. No special PCB characteristics are required.
+3. Assemble the board, you'll need [10x PCB Anderson Connectors](https://www.digikey.com/en/products/detail/anderson-power-products-inc/1335G1/10650394), and [2x connector tabs](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/63849-1/271178)
+4. You can get [an inexpensive Power Pole crimper](https://powerwerx.com/tricrimp-powerpole-connector-crimping-tool) and a [couple connectors](https://powerwerx.com/anderson-powerpole-connectors-15amp-unassembled) from PowerWerx.
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/terminal_block_assembled.jpg" />
     <figcaption>
-       
+       Assembled, it should look something like this.
     </figcaption>
 </figure>
