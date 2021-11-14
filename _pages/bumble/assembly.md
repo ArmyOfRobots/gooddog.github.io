@@ -156,7 +156,6 @@ perfect length and connectors for this size of robot.
     <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_mounted.jpg" />
     <figcaption>
        Route the USB cable on the top side of the board, so there is less potential for EMI.
-        
     </figcaption>
 </figure>
 
@@ -186,5 +185,36 @@ Attach the Terminal Block
     <img src="{{ site.baseurl | prepend: site.url }}/images/terminal_block_mounted.jpg" />
     <figcaption>
        It goes in the front. Put the power input / switch connectors closer to the side as shown to simplify the wiring later.
+    </figcaption>
+</figure>
+
+Wire your Motors and ODrive
+
+Shorten up the 3 big power wires from your motors as much as you think is prudent, and attach some wire ferrules to the end.
+Ferrules are important, because they will effectively turn the multi-strand wire in the motor wires
+back to single strand which is very easy to screw into the terminal blocks on the ODrive. It will also help prevent a
+single strand of wire getting loose and causing a short-circuit.
+
+I used [this wire ferrule crimper](https://www.amazon.com/gp/product/B073TZ5BBG) which was very cheap on Amazon and 
+probably include more crimps than most mortal humans will ever use.
+
+The other 5-stranded wires are used to send the hall effect encoder signal from the motor to the 
+ODrive controller. This lets you run the motor efficiently at very low speeds, and also have some
+understanding of how many turns of the wheel have been made for odometry. 
+
+My favorite solution here is to use [Molex SL](https://www.molex.com/molex/products/family/sl_connectors)
+connectors. They are size-compatible with what are known as "Dupont connectors" 
+(those 0.1inch pitch connectors that you use to assemble Arduino circuits, etc). However, they are
+more reliable, and you can more easily find [proper crimpers](https://www.digikey.com/en/products/detail/molex/2002187000/14311433).
+
+Check out this [guide on proper crimping](http://www.mattmillman.com/info/crimpconnectors/#sl) and some
+additional explanation of crimp connections.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/motor_crimped_connectors.jpg" />
+    <figcaption>
+       Keep the wires as short as you reasonably can for the least amount of EMI. Long wires basically
+act like big antennas, and their signal can couple to other wiring inside of the robot. This is because
+a lot of current is getting switched on and off rapidly to drive the motors.
     </figcaption>
 </figure>
