@@ -188,7 +188,9 @@ Attach the Terminal Block
     </figcaption>
 </figure>
 
-Wire your Motors and ODrive
+---
+
+**Wire your Motors and ODrive**
 
 Shorten up the 3 big power wires from your motors as much as you think is prudent, and attach some wire ferrules to the end.
 Ferrules are important, because they will effectively turn the multi-strand wire in the motor wires
