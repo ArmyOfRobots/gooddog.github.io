@@ -275,3 +275,30 @@ Plug that into the power distribution board.
     </figcaption>
 </figure>
 
+Take the Yellow and Black leads from the DC-to-DC converter, these are going to go into 
+the Jetson Xavier AGX board. This board takes a 2.5mm ID, 5.5mm OD Plug, which may be a bit 
+bigger than the 2.1x5.5mm plugs which are most common in electronics projects.
+
+The best way I found to accomplish this was using [this cable assembly](https://www.digikey.com/en/products/detail/tensility-international-corp/10-01779/5638255)
+from Digi-key, which already has a right-angle connector on it. 
+
+The easiest way to attach these two wires is with some heat shrinking "butt splice" connectors.
+
+I like these official [Molex Perma Seal](https://www.digikey.com/en/products/detail/molex/0191640013/279226) ones, which are also available 
+very cheaply from [Waytek Wire](https://www.waytekwire.com/item/30980/Molex-19164-0013-Perma-Seal-Butt-Connector-/) 
+with [matching crimpers](https://www.waytekwire.com/item/479/Molex-64016-0041-Perma-Seal-Hand-Crimping-Tool-/). 
+
+You can get some clones of these Perma Seal products on Amazon, for a bit less money. However, I have found that they
+are somewhat unreliable. If you do the crimp, and it works (you tug on the wires and they don't come apart), then
+you are fine. But maybe 30% of the time, something will go wrong in the crimping process, and you'll have to restrip
+the wire and try again. The Molex brand ones, with official crimp tool, work 100% of the time for me.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/dc-dc-jetson-connector.jpg" />
+    <figcaption>
+       These are 14AWG wires, with the Power Pole 30 connectors on the other end.
+    </figcaption>
+</figure>
+
+
+
