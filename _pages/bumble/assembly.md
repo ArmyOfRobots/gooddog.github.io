@@ -98,8 +98,15 @@ battery itself.
     </figcaption>
 </figure>
 
-2. Install the Pololu caster wheel.
+2. Install the Pololu caster wheel. Take the "Caster wheel base" 3D printed part, and the plastic base of the caster wheel and attach it to the matching hole at the bottom of the plate. Use M3x25 button head hex screws (a full socket cap will probably be too big), and
+some matching hex nuts. Once you attach the plastic base, put in the rollers into the caster wheel base, and snap in the retaining clip.
 
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/caster_base_bottom.jpg" />
+    <figcaption>
+        Use rounded button head M3 screws so that there is no interference with the caster ball.
+    </figcaption>
+</figure>
 
 4. Attach the motors to the motor mounts. You'll want the flat part of the
 hoverboard motor shaft to go against the bottom of the plate. 
