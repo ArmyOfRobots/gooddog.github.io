@@ -332,10 +332,21 @@ It's a pretty standard part that you'll see on a lot of electronics, and it can 
 I went all out with these [insulated, heat shrinking, spade connectors](https://www.digikey.com/en/products/detail/molex/0191640051/2405835).
 You can find cheaper ones, basically any 0.25inch "quick disconnect" spade crimp terminals will work.
 
-
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/switch_leads.jpg" />
     <figcaption>
-       The switch just snaps into the rectangular opening on the top case.
+       The switch leads should look like this, once you crimp them, and apply a heat gun on the
+heat-shrink insulation.
+    </figcaption>
+</figure>
+
+If that looks good, then you should be able to plug in your battery, the switch leads, and hit the power switch!
+You should see a green light on the ODrive board at this point.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/switch_wired.jpg" />
+    <figcaption>
+       The switch leads should look like this, once you crimp them, and apply a heat gun on the
+heat-shrink insulation.
     </figcaption>
 </figure>
