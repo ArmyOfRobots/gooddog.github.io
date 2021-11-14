@@ -178,3 +178,13 @@ Instructions:
        Assembled, it should look something like this.
     </figcaption>
 </figure>
+
+
+Attach the Terminal Block
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/terminal_block_mounted.jpg" />
+    <figcaption>
+       It goes in the front. Put the power input / switch connectors closer to the side as shown to simplify the wiring later.
+    </figcaption>
+</figure>
