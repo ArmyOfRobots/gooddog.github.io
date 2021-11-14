@@ -88,7 +88,7 @@ have a bunch of sizes to choose from and make adjustments and hacks as necessary
 
 Once you have printed all the parts, you can start assembly.
 
-1. Install the battery. Use two big zip ties through the integrated clips to keep it tied down.
+Install the battery. Use two big zip ties through the integrated clips to keep it tied down.
 I used a zip-tie gun set to around 40 pounds of pressure, but just make it firm without deforming the 
 battery itself.
 
@@ -98,7 +98,7 @@ battery itself.
     </figcaption>
 </figure>
 
-2. Install the Pololu caster wheel. Take the "Caster wheel base" 3D printed part, and the plastic base of the caster wheel and attach it to the matching hole at the bottom of the plate. Use M3x25 button head hex screws (a full socket cap will probably be too big), and
+Install the Pololu caster wheel. Take the "Caster wheel base" 3D printed part, and the plastic base of the caster wheel and attach it to the matching hole at the bottom of the plate. Use M3x25 button head hex screws (a full socket cap will probably be too big), and
 some matching hex nuts. Once you attach the plastic base, put in the rollers into the caster wheel base, and snap in the retaining clip.
 
 <figure>
@@ -108,9 +108,16 @@ some matching hex nuts. Once you attach the plastic base, put in the rollers int
     </figcaption>
 </figure>
 
-4. Attach the motors to the motor mounts. You'll want the flat part of the
+Attach the motors to the motor mounts. You'll want the flat part of the
 hoverboard motor shaft to go against the bottom of the plate. 
 Screw everything in with M4x40 hex cap screws, and M4 hex nuts that go into the traps at the bottom.
 (Be sure to clear out all of the support material from the nut traps)
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/bottom_motors_attached.jpg" />
+    <figcaption>
+        Here I have shortened the wires, and crimped wire "ferrules" to them already.
+    </figcaption>
+</figure>
 
 
