@@ -120,4 +120,15 @@ Screw everything in with M4x40 hex cap screws, and M4 hex nuts that go into the 
     </figcaption>
 </figure>
 
+Install the [DC-DC converter](https://www.amazon.com/gp/product/B08KZPXK63/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1). 
+This component is not strictly necessary, because the Jetson Xavier board runs on 12-20V input, and our battery is around 14V.
+However, I've noticed that there can be power spikes at a high enough level to be dangerous to the Jetson Xavier,
+so running it through a DC-DC converter is the safest option.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/robot_mounted_psu.jpg" />
+    <figcaption>
+        If you look in the previous picture, I added some furniture "feet" to keep the PSU more stabilized.
+    </figcaption>
+</figure>
 
