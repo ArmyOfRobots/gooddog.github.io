@@ -243,6 +243,10 @@ Quick checkup, at this point you should have the following things done
  - Power connected to the ODrive as shown
  - Each of the motor power leads connected to the ODrive
  - Each of the motor encoders connected to the ODrive
+ 
+--- 
+
+**Finish wiring the bottom case assembly**
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_connected.jpg" />
@@ -251,7 +255,7 @@ Quick checkup, at this point you should have the following things done
     </figcaption>
 </figure>
 
-Using 14 or 16 AWG wire, make a cable that will connect the battery to the power distribution board.
+Next, using 14 or 16 AWG wire, make a cable that will connect the battery to the power distribution board.
 
 I used [these XT60 Pigtails](https://www.amazon.com/gp/product/B07BF8154S) from Amazon, and the crimped
 30Amp Anderson PowerPole connectors to the other side as shown.
@@ -293,12 +297,45 @@ are somewhat unreliable. If you do the crimp, and it works (you tug on the wires
 you are fine. But maybe 30% of the time, something will go wrong in the crimping process, and you'll have to restrip
 the wire and try again. The Molex brand ones, with official crimp tool, work 100% of the time for me.
 
+Be sure to add a ferrite core to the end of the wire where it will attach to the Jetson Dev Kit.
+
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/dc-dc-jetson-connector.jpg" />
     <figcaption>
-       These are 14AWG wires, with the Power Pole 30 connectors on the other end.
+       Add a ferrite core for better resilience to EMI.
     </figcaption>
 </figure>
 
+At this point, you are done with the bottom part of the case! 
+
+---
+
+**Assembling the power switch**
+
+We've gotten ourselves [a nice little rocker power switch](https://www.digikey.com/en/products/detail/e-switch/RSC141D1A81/4029190)
+so now it's time to attach it.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/switch_installed.jpg" />
+    <figcaption>
+       The switch just snaps into the rectangular opening on the top case.
+    </figcaption>
+</figure>
+
+Build yourself two power leads that will go between the switch and the power distribution board.
+You want around 8 inches or so, to give yourself room to open the case later, without being
+excessively long to introduce EMI.
+
+Most power switches that you find are going to be using so called "quick connect" 0.25inch spade connectors.
+It's a pretty standard part that you'll see on a lot of electronics, and it can handle 30 amps or so pretty reliably, plenty for our application.
+
+I went all out with these [insulated, heat shrinking, spade connectors](https://www.digikey.com/en/products/detail/molex/0191640051/2405835).
+You can find cheaper ones, basically any 0.25inch "quick disconnect" spade crimp terminals will work.
 
 
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/switch_leads.jpg" />
+    <figcaption>
+       The switch just snaps into the rectangular opening on the top case.
+    </figcaption>
+</figure>
