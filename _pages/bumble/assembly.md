@@ -247,6 +247,31 @@ Quick checkup, at this point you should have the following things done
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_connected.jpg" />
     <figcaption>
-       Reference photo
+       Reference of what things should be looking like at this point.
     </figcaption>
 </figure>
+
+Using 14 or 16 AWG wire, make a cable that will connect the battery to the power distribution board.
+
+I used [these XT60 Pigtails](https://www.amazon.com/gp/product/B07BF8154S) from Amazon, and the crimped
+30Amp Anderson PowerPole connectors to the other side as shown.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/xt60_connector_made.jpg" />
+    <figcaption>
+       These are 14AWG wires, with the Power Pole 30 connectors on the other end.
+    </figcaption>
+</figure>
+
+Take the Red and Black leads off of the DC-to-DC converter, and crimp on some 30 Amp Anderson PowerPole
+connectors to them. 
+
+Plug that into the power distribution board.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/dc-dc-connector.jpg" />
+    <figcaption>
+       These are 14AWG wires, with the Power Pole 30 connectors on the other end.
+    </figcaption>
+</figure>
+
