@@ -129,6 +129,7 @@ so running it through a DC-DC converter is the safest option.
     <img src="{{ site.baseurl | prepend: site.url }}/images/robot_mounted_psu.jpg" />
     <figcaption>
         If you look in the previous picture, I added some furniture "feet" to keep the PSU more stabilized.
+        Also, keep the cables going out through the right side, it will be easier to wire later.
     </figcaption>
 </figure>
 
@@ -154,8 +155,8 @@ perfect length and connectors for this size of robot.
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_mounted.jpg" />
     <figcaption>
-        I recommend some inexpensive ceramic capacitor kit from Amazon. Just solder on to the A, B, and Z terminals to ground on
-            each motor sensor input.
+       Route the USB cable on the top side of the board, so there is less potential for EMI.
+        
     </figcaption>
 </figure>
 
@@ -164,7 +165,6 @@ Prepare the Terminal Block
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/terminal_block_assembled.jpg" />
     <figcaption>
-        I recommend some inexpensive ceramic capacitor kit from Amazon. Just solder on to the A, B, and Z terminals to ground on
-            each motor sensor input.
+       
     </figcaption>
 </figure>
