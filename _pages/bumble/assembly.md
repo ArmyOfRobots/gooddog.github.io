@@ -218,3 +218,15 @@ act like big antennas, and their signal can couple to other wiring inside of the
 a lot of current is getting switched on and off rapidly to drive the motors.
     </figcaption>
 </figure>
+
+Build a cable to connect the ODrive to the terminal block.
+
+Build around an 8 inch cable to connect the ODrive (wire ferrules to go into the green block labelled + and -)
+and the terminal block which distributes power.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/anderson_to_ferrule.jpg" />
+    <figcaption>
+       Use some good crimpers to make this a solid cable.
+    </figcaption>
+</figure>
