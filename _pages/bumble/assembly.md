@@ -132,3 +132,15 @@ so running it through a DC-DC converter is the safest option.
     </figcaption>
 </figure>
 
+Prepare your [ODrive 24V](https://odriverobotics.com/shop/odrive-v36) edition by soldering decoupling
+capacitors to the motor hall effect sensor terminals. We used 22nf capacitors and followed the [instructions here](https://discourse.odriverobotics.com/t/encoder-error-error-illegal-hall-state/1047/7).
+Don't skip this step, if you do, the motor control will appear to work, but randomly after a few minutes of operation,
+you will see the `ERROR_ILLEGAL_HALL_STATE` condition.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_caps.jpg" />
+    <figcaption>
+        I recommend some inexpensive ceramic capacitor kit from Amazon. Just solder on to the A, B, and Z terminals to ground on
+            each motor sensor input.
+    </figcaption>
+</figure>
