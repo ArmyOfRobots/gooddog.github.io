@@ -348,7 +348,7 @@ You should see a green light on the ODrive board at this point.
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/switch_wired.jpg" />
     <figcaption>
-       The switch leads should look like this, once you crimp them, and apply a heat gun on the
-heat-shrink insulation.
+       Almost everything in the bottom case is attached in this photo. Just plug the battery connector into the 
+socket on the left side of the power distribution board.
     </figcaption>
 </figure>
