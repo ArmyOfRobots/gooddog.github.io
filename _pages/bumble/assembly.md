@@ -141,7 +141,7 @@ you will see the `ERROR_ILLEGAL_HALL_STATE` condition.
     <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_caps.jpg" />
     <figcaption>
         I recommend some inexpensive ceramic capacitor kit from Amazon. Just solder on to the A, B, and Z terminals to ground on
-            each motor sensor input.
+            each motor sensor input. There is some Kapton tape in the picture to help prevent shorts.
     </figcaption>
 </figure>
 
@@ -153,6 +153,16 @@ perfect length and connectors for this size of robot.
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_mounted.jpg" />
+    <figcaption>
+        I recommend some inexpensive ceramic capacitor kit from Amazon. Just solder on to the A, B, and Z terminals to ground on
+            each motor sensor input.
+    </figcaption>
+</figure>
+
+Prepare the Terminal Block
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/terminal_block_assembled.jpg" />
     <figcaption>
         I recommend some inexpensive ceramic capacitor kit from Amazon. Just solder on to the A, B, and Z terminals to ground on
             each motor sensor input.
