@@ -88,5 +88,22 @@ have a bunch of sizes to choose from and make adjustments and hacks as necessary
 
 Once you have printed all the parts, you can start assembly.
 
-1. Attach the motors to the motor mounts. You'll want the flat part of the
-hoverboard motor shaft to go against the bottom of the plate. And to screw everything in with M4x40 hex cap screws.
+1. Install the battery. Use two big zip ties through the integrated clips to keep it tied down.
+I used a zip-tie gun set to around 40 pounds of pressure, but just make it firm without deforming the 
+battery itself.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/zip_tie_bottom.jpg" />
+    <figcaption>You can use a zip tie gun set to 40-50 pounds, or just manually attach the zip ties through the integrated mounts.
+    </figcaption>
+</figure>
+
+2. Install the Pololu caster wheel.
+
+
+4. Attach the motors to the motor mounts. You'll want the flat part of the
+hoverboard motor shaft to go against the bottom of the plate. 
+Screw everything in with M4x40 hex cap screws, and M4 hex nuts that go into the traps at the bottom.
+(Be sure to clear out all of the support material from the nut traps)
+
+
