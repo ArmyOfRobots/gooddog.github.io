@@ -198,6 +198,9 @@ single strand of wire getting loose and causing a short-circuit.
 I used [this wire ferrule crimper](https://www.amazon.com/gp/product/B073TZ5BBG) which was very cheap on Amazon and 
 probably include more crimps than most mortal humans will ever use.
 
+I also added some [ferrite cores](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/74270117/1638926) to
+the motor wires, before attaching them to the ODrive board. This helps reduce EMI.
+
 The other 5-stranded wires are used to send the hall effect encoder signal from the motor to the 
 ODrive controller. This lets you run the motor efficiently at very low speeds, and also have some
 understanding of how many turns of the wheel have been made for odometry. 
@@ -219,7 +222,6 @@ a lot of current is getting switched on and off rapidly to drive the motors.
     </figcaption>
 </figure>
 
-Build a cable to connect the ODrive to the terminal block.
 
 Build around an 8 inch cable to connect the ODrive (wire ferrules to go into the green block labelled + and -)
 and the terminal block which distributes power.
@@ -228,5 +230,23 @@ and the terminal block which distributes power.
     <img src="{{ site.baseurl | prepend: site.url }}/images/anderson_to_ferrule.jpg" />
     <figcaption>
        Use some good crimpers to make this a solid cable.
+    </figcaption>
+</figure>
+
+Quick checkup, at this point you should have the following things done
+ - 14V LiFePO4 battery installed
+ - Hoverboard motors mounted
+ - Caster wheel mounted
+ - DC-to-DC Converter installed, wiring not yet created
+ - ODrive 24V edition mounted
+ - Power distribution board soldered up, and mounted
+ - Power connected to the ODrive as shown
+ - Each of the motor power leads connected to the ODrive
+ - Each of the motor encoders connected to the ODrive
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/odrive_connected.jpg" />
+    <figcaption>
+       Reference photo
     </figcaption>
 </figure>
