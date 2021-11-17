@@ -86,9 +86,24 @@ So, what you need to do is map the following pins, reading left to right
 Once you have everything working, you will need to connect a USB cable from your computer, to the SimpleBGC
 board, and get the SimpleBGC setup utility working.
 
-1. Enable the encoders AS5048A in SPI Mode.
-2. Enable the "skip autodetect" for the encoders
-3. Set the power to ~75
-4. Set the PID settings to something reasonable
-5. Calibrate the Efield and Eoffset for the motors
-6. Possibly add some vibration suprression
+1. Start with the Encoders tab
+   1. Enable the encoders AS5048A in SPI Mode on the Pitch and Yaw axes
+   2. Enable the "skip autodetect" for the encoders
+2. Go the Hardware tab
+   1. Roll disabled
+   2. Pitch and Yaw enabled, inverted, Num Poles = 22
+   3. Set the power to ~75
+   4. Axis TOP = Y
+   5. Axis RIGHT = X
+3. Go to the Stabilization tab
+   1. Start with the following PID parameters, to be tuned more later
+      1. Pitch - P10, I5, D9, Outer P 150
+      2. Yaw - P9, I5, D16, Outer P 150
+   2. Low pass filter 400 Hz on both Pitch and Yaw
+   3. D term LPF at 200Hz on both Pitch and Yaw
+4. Go back to the Encoders tab
+   1. Calibrate the Efield
+   2. Then, center the motors as best as you can, and Calibrate the Offset
+   3. Set the Limits to +/- 30 degrees on pitch and yaw, with a 10 degree limit width
+5. You want to make sure that you are not seeing any I2C errors, usually they are caused by the IMU Cable getting too close to either a motor, or a motor power connector.
+   1. Also check that the Encoders don't have errors, via the Debug/Request State field
