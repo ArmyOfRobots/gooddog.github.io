@@ -183,6 +183,14 @@ Later, we will set up the CANBUS for reliable communications.
 pip3 install Cython
 sudo pip3 install --upgrade odrive matplotlib==3.2.2
 ```
+
+Also, be sure to set up the proper udev rules, they won't come in automatically on the Jetson.
+```bash
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1209", ATTR{idProduct}=="0d[0-9][0-9]", MODE="0666"' | sudo tee /etc/udev/rules.d/91-odrive.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
 4. Run the instructions below to configure both hoverboard motors. They are adapted from [https://docs.odriverobotics.com/hoverboard](https://docs.odriverobotics.com/hoverboard)
 
 Note, if you run into a PHASE_RESISTANCE_OUT_OF_RANGE error, then you may need to increase the `resistance_calib_max_voltage` value.
