@@ -87,8 +87,12 @@ provided Network Manager.
 https://github.com/IntelRealSense/realsense-ros#step-2-install-intel-realsense-ros-from-sources
 
 ```bash
+# You'll need libbluetooth and libgstreamer
+sudo apt install libbluetooth-dev
+
+
 # If you get any build errors, you'll also need some extra ros packages
-sudo apt install ros-melodic-roscpp ros-melodic-cv-bridge ros-melodic-image-transport ros-melodic-tf ros-melodic-ddynamic-reconfigure ros-melodic-diagnostic-updater
+sudo apt install ros-melodic-roscpp ros-melodic-audio-common-msgs ros-melodic-cv-bridge ros-melodic-image-transport ros-melodic-tf ros-melodic-ddynamic-reconfigure ros-melodic-diagnostic-updater
 ```
 Note, you will need to make a soft link from `opencv4` to `opencv` for the package to compile properly.
 
