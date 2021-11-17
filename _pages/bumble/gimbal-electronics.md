@@ -78,3 +78,17 @@ So, what you need to do is map the following pins, reading left to right
     <img src="{{ site.baseurl | prepend: site.url }}/images/final_encoder_connector.JPG" />
     <figcaption>The final connector should look like this.</figcaption>
 </figure>
+
+---
+
+**How to configure the camera**
+
+Once you have everything working, you will need to connect a USB cable from your computer, to the SimpleBGC
+board, and get the SimpleBGC setup utility working.
+
+1. Enable the encoders AS5048A in SPI Mode.
+2. Enable the "skip autodetect" for the encoders
+3. Set the power to ~75
+4. Set the PID settings to something reasonable
+5. Calibrate the Efield and Eoffset for the motors
+6. Possibly add some vibration suprression
