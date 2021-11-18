@@ -321,3 +321,18 @@ You should see a signal when you open the recorded `cap.wav` file from your home
 ![audiotest.png](/images/audiotest.png)
 
 Seems pretty high quality, but a weird click at the start, and some awful DC offset that we can tackle next time.
+
+---
+
+**How to pair bluetooth**
+
+To run the robot, you'll need to get Android Studio and build the [App Reward Button](https://github.com/GoodDogAI/rewardapp)
+for your phone. Once you have that, you'll need to pair bluetooth:
+
+```bash
+sudo bluetoothctl
+scan on
+discoverable on
+```
+
+Now pair your phone on your android
