@@ -142,8 +142,9 @@ sudo lsblk # Find your card device name, usually it's /dev/mmcblk1p1
 sudo mkfs.ext4 /dev/mmcblk1p1 # Format as ext4
 
 sudo nano /etc/fstab
+
 # Add the following line at the bottom
-#/dev/mmcblk1p1       /media/card           ext4           defaults,nofail              0 0
+/dev/mmcblk1p1       /media/card           ext4           defaults,nofail,noatime              0 0
 
 # Make a place to mount it in /media/card
 sudo mkdir /media/card
