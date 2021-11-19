@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "GoodDog Bumble v0.2"
+date:   2021-11-19 14:03:00 -0700
+categories: update
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RptVgsv7DTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+We just got the Bumble v0.2 operational, especially big thanks to Taras for the mechanical design here!
+
+As you see in the video, the motion of the bot, especially the head, is extremely smooth. We decided to drop
+the Dynamixel servos that were in [version 0.1](https://www.gooddog.ai/bumble/), and go instead for Brushless Gimbal
+Motors that you'd typically find stabilizing the camera on an drone.
+
+In real life, it's almost surreal watching the robot operate at this speed. The head just moves extremely smoothly, and 
+completely quietly. The main drive motors are also extremely quiet. This means that the robot should end up extremely low 
+maintenance, and will stand up to lots of repetitive motions without any degradation.
+
+It's still powered by a Jetson AGX Xavier, we are hoping the price will go down on those in the future.
+
+Links if you want to assemble your own
+- [Mechanical Assembly Instructions](https://www.gooddog.ai/bumble/assembly)
+- [Jetson Xavier Provisioning](https://www.gooddog.ai/bumble/xavier-provisioning)
+- [Brushless Gimbal Setup](https://www.gooddog.ai/bumble/gimbal-electronics)
