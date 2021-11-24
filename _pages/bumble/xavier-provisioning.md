@@ -136,15 +136,21 @@ echo 'SUBSYSTEM=="tty", GROUP="tty", MODE="0660"' > /etc/udev/rules.d/99-user-tt
 It helps to have a huge 128GB or bigger MicroSD card to store the recordings of your robot's experiences.
 You'll want one with "C10, U3, V30, A2" or similar specs, with a good consistent writing rate.
 
+Note, we are using a FAT32 filesystem here, which may bog down at some point, you should keep an eye on your
+bag files to see if they have gaps in their recorded events.
+
+Also note, there is a bug with the Xavier platform, if you have an ext4 partitioned SD card inserted at boot, the
+bootloader will attempt to use it, leading to weird issues (like the device tree overlay for the microphone not loading).
+
 ```bash
 # Format the card as ext4 for good performance on linux
 sudo lsblk # Find your card device name, usually it's /dev/mmcblk1p1
-sudo mkfs.ext4 /dev/mmcblk1p1 # Format as ext4
+sudo mkfs.vfat -F32 /dev/mmcblk1p1 # Format as fat32
 
 sudo nano /etc/fstab
 
 # Add the following line at the bottom
-/dev/mmcblk1p1       /media/card           ext4           defaults,nofail,noatime              0 0
+/dev/mmcblk1p1       /media/card           vfat           rw,uid=robot,gid=robot,nofail,noatime              0 0
 
 # Make a place to mount it in /media/card
 sudo mkdir /media/card
