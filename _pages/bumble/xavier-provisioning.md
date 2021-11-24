@@ -196,6 +196,9 @@ Also, be sure to set up the proper udev rules, they won't come in automatically 
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1209", ATTR{idProduct}=="0d[0-9][0-9]", MODE="0666"' | sudo tee /etc/udev/rules.d/91-odrive.rules
 sudo udevadm control --reload-rules
 sudo udevadm trigger
+
+# And add your user to the dialout group, assuming "robot" is your username 
+sudo adduser robot dialout
 ```
 
 4. Run the instructions below to configure both hoverboard motors. They are adapted from [https://docs.odriverobotics.com/hoverboard](https://docs.odriverobotics.com/hoverboard)
