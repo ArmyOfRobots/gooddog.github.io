@@ -383,3 +383,24 @@ so that you can have a nice clear connection with polarity between this board an
     </figcaption>
 </figure>
 
+**Seal up the case and install bumpers**
+
+Once everything is ready and tested, you can use 4 M4x40 hex nuts to seal up the case. There is a spot for a 
+trapped nut on the bottom of the case, and the nuts come in from the top.
+
+Make sure that your wiring is tight and secure, and that there are no bulges sticking out through the case.
+It should really be a snug easy fit, but it can be finnicky if your wiring is too large or rats-nesty.
+
+I used some of this [Neoprene foam stripping](https://www.amazon.com/gp/product/B07WTRK3LX)
+around the case to give the robot some padding in case it bumps into anything. As an added benefit, it keeps
+the trapped nuts in place, so you don't have to worry about them falling out if you ever need to open 
+the case.
+
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/side_bumper.jpg" />
+    <figcaption>
+        The bumpers are a must if you are going to use it indoors.
+    </figcaption>
+</figure>
+
