@@ -73,10 +73,19 @@ So, what you need to do is map the following pins, reading left to right
  - CS (pitch motor) ⇨ AUX2
  - CS (yaw motor) ⇨ FC_ROLL
 
+I used a [9x2 Molex SL female header](https://www.digikey.com/en/products/detail/molex/0022552181/171970) to
+attach the encoders to the Simple BGC.
+
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/final_encoder_connector.JPG" />
     <figcaption>The final connector should look like this.</figcaption>
 </figure>
+
+---
+
+**Mechanical Setup**
+
+TODO
 
 ---
 

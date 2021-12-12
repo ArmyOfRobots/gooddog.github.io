@@ -387,6 +387,14 @@ so that you can have a nice clear connection with polarity between this board an
     </figcaption>
 </figure>
 
+**Install the Gimbal Head**
+
+- Follow the [Gimbal Electronics](/bumble/gimbal-electronics) instructions to install and wire up the
+gimbal camera head.
+
+**Wire up Xavier Expansion Port**
+ - TODO
+
 **Seal up the case and install bumpers**
 
 Once everything is ready and tested, you can use 4 M4x40 hex nuts to seal up the case. There is a spot for a 
