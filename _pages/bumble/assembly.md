@@ -367,3 +367,19 @@ robot body will have two antennas, one for the Wifi and one for the Bluetooth.
     </figcaption>
 </figure>
 
+**Installing the Microphone**
+
+Take your [Adafruit SPH0645LM4H](https://www.adafruit.com/product/3421) breakout board, and solder on a connector
+as in the picture. You'll then use some M2.5x5 screws to attach the microphone to the case. Be sure that the 
+port of the microphone is pointing outwards.
+
+I used a [Molex SL 6 pin header](https://www.digikey.com/en/products/detail/molex/0705430005/114930?s=N4IgTCBcDaIAwHY4FYAsBmOXkgLoF8g)
+so that you can have a nice clear connection with polarity between this board and the Jetson Xavier.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/mic_molex_sl.jpg" />
+    <figcaption>
+        I used a 6 pin Molex SL header, as shown in the picture.
+    </figcaption>
+</figure>
+
