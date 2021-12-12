@@ -159,7 +159,7 @@ perfect length and connectors for this size of robot.
     </figcaption>
 </figure>
 
-Build the Terminal Block
+**Build the Terminal Block**
 
 The handiest way to attach relatively high current wiring in a safe and easy manner is with
 "Anderson PowerPole" brand connectors. You can get this board built and shipped with [jlcpcb.com](https://www.jlcpcb.com) 
@@ -179,7 +179,7 @@ Instructions:
 </figure>
 
 
-Attach the Terminal Block
+**Attach the Terminal Block**
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/terminal_block_mounted.jpg" />
@@ -352,3 +352,18 @@ You should see a green light on the ODrive board at this point.
 socket on the left side of the power distribution board.
     </figcaption>
 </figure>
+
+**Installing the Wifi / Bluetooth antennas**
+
+On the bottom of your Jetson board, attach a PCI-E Wifi module. I recommend to use an Intel 8265, which is very well 
+tested and works well with the Jetson ecosystem. It's going to use a really tiny "U.FL" connector, and the 
+robot body will have two antennas, one for the Wifi and one for the Bluetooth.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/antenna_cons.jpg" />
+    <figcaption>
+        Push the connector through the holes in the top part of the case, the hex nuts should catch the plastic, and
+        you can use a wrench to tighten it up.
+    </figcaption>
+</figure>
+

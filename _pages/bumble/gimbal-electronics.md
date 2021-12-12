@@ -22,8 +22,7 @@ The cost is actually similar to a servo based pan-tilt head, if you are using ni
 ----
 
 **Component List**
- - [GM2804 Motor w/ AS5048A Encoder](https://shop.iflight-rc.com/ipower-gm2804-gimbal-motor-with-as5048a-encoder-pro288?search=2804%20encoder)
- - [GM3506 Motor w/ AS5048A Encoder](https://shop.iflight-rc.com/ipower-motor-gm3506-brushless-gimbal-motor-w-as5048a-encoder-pro1155?search=3506%20encoder)
+ - 2 X [GM3506 Motor w/ AS5048A Encoder](https://shop.iflight-rc.com/ipower-motor-gm3506-brushless-gimbal-motor-w-as5048a-encoder-pro1155?search=3506%20encoder)
  - [BaseCam SimpleBGC 32-bit Tiny Rev. C](https://www.basecamelectronics.com/sbgc32tiny_rev_c/)
  - 2x9 Crimp Connector Housing
  - Female Crimp terminals
