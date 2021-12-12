@@ -356,8 +356,12 @@ socket on the left side of the power distribution board.
 **Installing the Wifi / Bluetooth antennas**
 
 On the bottom of your Jetson board, attach a PCI-E Wifi module. I recommend to use an Intel 8265, which is very well 
-tested and works well with the Jetson ecosystem. It's going to use a really tiny "U.FL" connector, and the 
+tested and works well with the Jetson ecosystem. It's going to use a really tiny "U.FL IPX4" connector, and the 
 robot body will have two antennas, one for the Wifi and one for the Bluetooth.
+
+The [antenna connectors](https://www.amazon.com/gp/product/B07WC3GS2V/) that I used came with a hex nut, a lock nut, and a 
+spring washer. Be sure to use all three of these on the top part of the case, so that your connections don't get loose
+over time.
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/antenna_cons.jpg" />
