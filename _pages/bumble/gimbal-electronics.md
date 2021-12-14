@@ -115,7 +115,8 @@ Then, take the second motor, and attach it to the "Camera bracket", making sure 
 Attach the IMU to the camera bracket, this part uses M3 hex-cap screws, and route it's cable out the back end.
 You can use a small zip-tie to clip the cable to the plastic bracket.
 
-Finally, you can mount the Intel Realsense D455 using two M4x8 screws.
+Finally, you can mount the Intel Realsense D455 using two M4x8 screws. The actual Head base connects with two M3x10
+bolts, with the threads directly 3D printed. It's actually quite strong: neat!
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly2.jpg" />
