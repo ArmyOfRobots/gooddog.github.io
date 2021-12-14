@@ -94,7 +94,9 @@ attach the encoders to the Simple BGC.
 **Mechanical Setup**
 
 To assemble the pan-tilt module, first connect the SPI cables to the encoders and prepare the harness to connect
-that to the SimpleBGC board as in the section above.
+that to the SimpleBGC board as in the section above. You may want to assemble the final 9x2 pin header
+with the wires already going through the hole in the top of the robot case, so that you don't want to disconnect
+anything later.
 
 Next, you'll want to print and assemble the [3D-printed plastic components](https://github.com/GoodDogAI/bumble-hardware/tree/main/3mf).
 
@@ -114,6 +116,26 @@ Attach the IMU to the camera bracket, this part uses M3 hex-cap screws, and rout
 You can use a small zip-tie to clip the cable to the plastic bracket.
 
 Finally, you can mount the Intel Realsense D455 using two M4x8 screws.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly2.jpg" />
+    <figcaption>Route the motor power and encoder wires through the square opening in the top of the case.</figcaption>
+</figure>
+
+Once you get this far, you'll need to start using the zip tie posts and some small zip ties to keep the wiring clean.
+The first versions I built didn't worry about this, and there were constant EMI issues, so take good care, and
+be sure to keep your wires cut down as short as possible.
+
+You'll also want to take the other end of the IMU cable, and pass it through the provided opening in the case.
+
+The final wiring is as shown below. Notice how the black power wires from the motors are physically separate
+from everything else. The power wires for the simple BGC are soldered on, and then routed down the case 
+directly to the terminal block.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly3.jpg" />
+    <figcaption>Final wiring configuration in our first build.</figcaption>
+</figure>
 
 ---
 
