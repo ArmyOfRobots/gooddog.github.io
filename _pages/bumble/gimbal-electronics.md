@@ -19,6 +19,13 @@ Cons:
 
 The cost is actually similar to a servo based pan-tilt head, if you are using nicer Dynamixel servos.
 
+---
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_parts.png" />
+    <figcaption>The final camera system, modelled in Fusion 360 by Taras H.</figcaption>
+</figure>
+
 ----
 
 **Component List**
@@ -81,14 +88,32 @@ attach the encoders to the Simple BGC.
     <figcaption>The final connector should look like this.</figcaption>
 </figure>
 
+
 ---
 
 **Mechanical Setup**
 
+To assemble the pan-tilt module, first connect the SPI cables to the encoders and prepare the harness to connect
+that to the SimpleBGC board as in the section above.
+
+Next, you'll want to print and assemble the [3D-printed plastic components](https://github.com/GoodDogAI/bumble-hardware/tree/main/3mf).
+
 <figure>
-    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_parts.png" />
-    <figcaption>The final camera system, modelled in Fusion 360 by Taras H.</figcaption>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly1.jpg" />
+    <figcaption>Orient the wires as shown in the photo above for best performance.</figcaption>
 </figure>
+
+The GM3506 motors mount with M2.5 screws. First, screw in the bottom "head base" to the GM3506 motor, and then
+attach the first motor to the "head base" and the "middle bracket". You'll want to route the motor cables for the bottom motor out the base.
+I would suggest to keep the bundles for the SPI/Encoder wires and the motor power connections separate as best
+as possible to avoid EMI.
+
+Then, take the second motor, and attach it to the "Camera bracket", making sure the wires come out the back.
+
+Attach the IMU to the camera bracket, this part uses M3 hex-cap screws, and route it's cable out the back end.
+You can use a small zip-tie to clip the cable to the plastic bracket.
+
+Finally, you can mount the Intel Realsense D455 using two M4x8 screws.
 
 ---
 
