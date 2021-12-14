@@ -25,6 +25,11 @@ Cons:
 
 The cost is actually similar to a servo based pan-tilt head, if you are using nicer Dynamixel servos.
 
+The tilt motor in this configuration is in an unstable equilibrium, and in fact, it will draw more current
+when the angle is greater than zero. However, in a practical setting, this is ~100ma at most, and there are
+mechanical endstops to prevent it from tilting so far that it can't return back to center under motor power.
+In fact, this set up works while using just around 30% of the max current available to the motor controller
+when powered by a 14V battery pack.
 
 ----
 
