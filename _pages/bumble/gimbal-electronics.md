@@ -130,7 +130,8 @@ You'll also want to take the other end of the IMU cable, and pass it through the
 
 The final wiring is as shown below. Notice how the black power wires from the motors are physically separate
 from everything else. The power wires for the simple BGC are soldered on, and then routed down the case 
-directly to the terminal block.
+directly to the terminal block. If you are extra-paranoid about EMI, like I am, then you can also route the
+motor power cables through some [small ferrites](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/74270117/1638926).
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly3.jpg" />
