@@ -85,7 +85,10 @@ attach the encoders to the Simple BGC.
 
 **Mechanical Setup**
 
-TODO
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_parts.png" />
+    <figcaption>The final camera system, modelled in Fusion 360 by Taras H.</figcaption>
+</figure>
 
 ---
 
