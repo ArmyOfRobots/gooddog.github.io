@@ -5,6 +5,11 @@ permalink: "bumble/gimbal-electronics"
 order: 3
 ---
 
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_parts.png" />
+    <figcaption>The brushless-gimbal pan-tilt camera system, modelled in Fusion 360 by Taras H.</figcaption>
+</figure>
+
 The new gimbal-based pan-tilt module allows you to mount an Intel RealSense camera to the robot,
 and have that camera be able to look in two-axes. The gimbal based motors don't have any gearboxes,
 which brings some pros and cons.
@@ -19,12 +24,7 @@ Cons:
 
 The cost is actually similar to a servo based pan-tilt head, if you are using nicer Dynamixel servos.
 
----
 
-<figure>
-    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_parts.png" />
-    <figcaption>The final camera system, modelled in Fusion 360 by Taras H.</figcaption>
-</figure>
 
 ----
 
