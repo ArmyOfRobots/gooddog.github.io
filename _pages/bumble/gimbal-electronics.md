@@ -17,13 +17,13 @@ which brings some pros and cons.
 Pros:
  - Quiet, repeatable operation, with no wear-and-tear
  - Low backlash operation
+ - +/- 35 degrees of operation in each axis
 
 Cons:
  - Low torque, requiring you to balance the center of gravity
  - More parts and wiring
 
 The cost is actually similar to a servo based pan-tilt head, if you are using nicer Dynamixel servos.
-
 
 
 ----
