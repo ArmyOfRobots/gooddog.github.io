@@ -18,6 +18,7 @@ Pros:
  - Quiet, repeatable operation, with no wear-and-tear
  - Low backlash operation
  - +/- 35 degrees of operation in each axis
+ - [ROS Drivers](https://github.com/GoodDogAI/bumble/blob/master/src/simplebgc.cpp)
 
 Cons:
  - Low torque, requiring you to balance the center of gravity
@@ -26,10 +27,14 @@ Cons:
 The cost is actually similar to a servo based pan-tilt head, if you are using nicer Dynamixel servos.
 
 The tilt motor in this configuration is in an unstable equilibrium, and in fact, it will draw more current
-when the angle is greater than zero. However, in a practical setting, this is ~100ma at most, and there are
+when the angle is greater than zero. However, in a practical setting, this is ~350ma at most at the largest angles, and there are
 mechanical endstops to prevent it from tilting so far that it can't return back to center under motor power.
-In fact, this set up works while using just around 30% of the max current available to the motor controller
-when powered by a 14V battery pack.
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RptVgsv7DTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+As you can see, the head can move rapidly
 
 ----
 
