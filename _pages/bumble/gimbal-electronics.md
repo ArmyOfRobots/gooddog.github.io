@@ -199,3 +199,14 @@ board, and get the SimpleBGC setup utility working.
    3. Set the Limits to +/- 30 degrees on pitch and yaw, with a 10 degree limit width
 5. You want to make sure that you are not seeing any I2C errors, usually they are caused by the IMU Cable getting too close to either a motor, or a motor power connector.
    1. Also check that the Encoders don't have errors, via the Debug/Request State field
+
+---
+
+**Working with ROS**
+
+We have written a ROS node which can talk to the SimpleBGC board. The code is in [simplebgc.cpp](https://github.com/GoodDogAI/bumble/blob/master/src/simplebgc.cpp)
+
+You will need to connect the SimpleBGC to the Jetson board via the UART that's exposed on the Jetson's 40pin expansion
+connector. Please see the [main assembly instructions](https://www.gooddog.ai/bumble/assembly) for details.
+
+You'll also need to enable the serial connectivity, with the instructions in our [Xavier provisioning docs](https://www.gooddog.ai/bumble/xavier-provisioning)
