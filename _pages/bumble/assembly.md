@@ -456,11 +456,21 @@ You'll need to connect two devices to the 40-pin expansion port on the Jetson Xa
 
 I made the connections with a set of Molex SL crimpers as before.
 
+There are some great resources on the Jetson Hacks website, including more information and diagrams on the 40-pin
+connections.
+[Jetson Hacks 40 pin header docs](https://www.jetsonhacks.com/nvidia-jetson-agx-xavier-gpio-header-pinout/)
+
+Remember, that once you make the connections, you'll still need to [provision everything](https://www.gooddog.ai/bumble/xavier-provisioning).
+
+
 **Install the Jetson Xavier**
 
 The actual Jetson Xavier dev kit should slot in nicely at the back of the robot.
 Plug in the power connection, the 40-pin header connections, the wifi antennas, the camera USB, and the
 USB connection to the ODrive. 
+
+One last thing: install a nice big micro SD card to store the ROS bag files which the robot will record 
+while it's operating.
 
 **Seal up the case and install bumpers**
 
