@@ -210,3 +210,35 @@ You will need to connect the SimpleBGC to the Jetson board via the UART that's e
 connector. Please see the [main assembly instructions](https://www.gooddog.ai/bumble/assembly) for details.
 
 You'll also need to enable the serial connectivity, with the instructions in our [Xavier provisioning docs](https://www.gooddog.ai/bumble/xavier-provisioning)
+
+---
+
+**3D Printing support recommendations**
+
+There are four 3D-printed plastic components to be be produced.
+
+- Camera Bracket
+
+I recommend to print it face down, with break-away support material as
+shown in the photo. This way, you have the main loops of the perimeter printed in a very strong fashion.
+
+- Head Base
+
+Be sure to print this with the flat side oriented to the build plate. It has internal 3mm threads, which are quite
+strong, but which will only work well printed along the Z-axis. I found that in PLA or Tough PLA, the threads can last 
+for 2-3 cycles, which is enough, given how convenient they are to work with!
+
+- Middle Bracket
+
+Print it so that you have the main "L-shape" on the build plate. This means that the plastic perimeter loops 
+(which give strength to your FDM prints) are going to go across the main axes of the part.
+
+- PCB Cover
+
+No special considerations here.
+
+
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_print_supports.PNG" />
+</figure>
