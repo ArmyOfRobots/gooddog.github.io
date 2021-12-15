@@ -45,6 +45,8 @@ wear down over time, leading to consistent operation over a variety of condition
  - [2x9 Crimp Connector Housing](https://www.digikey.com/en/products/detail/molex/0022552181/171970)
  - [Female Crimp terminals](https://www.digikey.com/en/products/detail/molex/0016020082/362661)
  - [Intel RealSense D455 Camera](https://www.intelrealsense.com/depth-camera-d455/)
+ - [Right-angle USB C 3.1 Cable](https://www.amazon.com/gp/product/B08CY1L1Q7)
+ - [Right-angle USB C adapters](https://www.amazon.com/gp/product/B0882RJRQS)
 
 
 ***Encoder Wiring***
@@ -150,6 +152,19 @@ motor power cables through some [small ferrites](https://www.digikey.com/en/prod
     <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly3.jpg" />
     <figcaption>Final wiring configuration in our first build.</figcaption>
 </figure>
+
+You can then route the USB-C cable for the Intel RealSense down to the Jetson Xavier inside the case.
+I recommend to use two zip ties to as shown in the image below to act as a strain relief for the USB cable.
+Also, please check the linked cables in the BOM above, they were the ones that worked perfectly for me, after
+trying many varieties. You'll need a right-angle connection for the camera, but some RealSense boards are actually
+sensitive to the polarity of the connection! So, with a double-right-angle cable you can always make it work.
+And, you'll need a small adapter to have enough space to plug everything into the Jetson itself.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly_top.jpg" />
+    <figcaption>Final look with everything attached and closed up</figcaption>
+</figure>
+
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/final_assembly.jpg" />
