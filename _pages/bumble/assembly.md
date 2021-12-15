@@ -454,6 +454,14 @@ You'll need to connect two devices to the 40-pin expansion port on the Jetson Xa
 |              39 | GND             | SEL on Microphone       |
 |              40 | GPIO21          |                         |
 
+I made the connections with a set of Molex SL crimpers as before.
+
+**Install the Jetson Xavier**
+
+The actual Jetson Xavier dev kit should slot in nicely at the back of the robot.
+Plug in the power connection, the 40-pin header connections, the wifi antennas, the camera USB, and the
+USB connection to the ODrive. 
+
 **Seal up the case and install bumpers**
 
 Once everything is ready and tested, you can use 4 M4x40 hex nuts to seal up the case. There is a spot for a 
