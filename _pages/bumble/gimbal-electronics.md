@@ -34,16 +34,17 @@ mechanical endstops to prevent it from tilting so far that it can't return back 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RptVgsv7DTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-As you can see, the head can move rapidly
+As you can see, the head can move rapidly, smoothly, and is nearly completely silent. And, there are few parts to
+wear down over time, leading to consistent operation over a variety of conditions and a long duration of operation.
 
 ----
 
 **Component List**
  - 2 X [GM3506 Motor w/ AS5048A Encoder](https://shop.iflight-rc.com/ipower-motor-gm3506-brushless-gimbal-motor-w-as5048a-encoder-pro1155?search=3506%20encoder)
  - [BaseCam SimpleBGC 32-bit Tiny Rev. C](https://www.basecamelectronics.com/sbgc32tiny_rev_c/)
- - 2x9 Crimp Connector Housing
- - Female Crimp terminals
- - 2x9 Male Connector Housing
+ - [2x9 Crimp Connector Housing](https://www.digikey.com/en/products/detail/molex/0022552181/171970)
+ - [Female Crimp terminals](https://www.digikey.com/en/products/detail/molex/0016020082/362661)
+ - [Intel RealSense D455 Camera](https://www.intelrealsense.com/depth-camera-d455/)
 
 
 ***Encoder Wiring***
@@ -140,13 +141,19 @@ be sure to keep your wires cut down as short as possible.
 You'll also want to take the other end of the IMU cable, and pass it through the provided opening in the case.
 
 The final wiring is as shown below. Notice how the black power wires from the motors are physically separate
-from everything else. The power wires for the simple BGC are soldered on, and then routed down the case 
-directly to the terminal block. If you are extra-paranoid about EMI, like I am, then you can also route the
+from everything else. The power wires for the simple BGC are soldered on, crimped with PowerPole 15 connectors,
+and then routed down the case directly to the terminal block.
+If you are extra-paranoid about EMI, like I am, then you can also route the
 motor power cables through some [small ferrites](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/74270117/1638926).
 
 <figure>
     <img src="{{ site.baseurl | prepend: site.url }}/images/camera_assembly3.jpg" />
     <figcaption>Final wiring configuration in our first build.</figcaption>
+</figure>
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/final_assembly.jpg" />
+    <figcaption>Final look with everything attached and closed up</figcaption>
 </figure>
 
 ---
