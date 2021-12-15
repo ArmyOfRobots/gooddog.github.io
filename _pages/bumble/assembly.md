@@ -393,7 +393,66 @@ so that you can have a nice clear connection with polarity between this board an
 gimbal camera head.
 
 **Wire up Xavier Expansion Port**
- - TODO
+
+You'll need to connect two devices to the 40-pin expansion port on the Jetson Xavier.
+
+ 1. UART RX/TX for the SimpleBGC
+ 2. I2S Microphone [SPH0645LM4H breakout board](https://www.adafruit.com/product/3421)
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/jetson_gpio.jpg" />
+    <figcaption>
+        Jetson GPIO description, source: jetsonhacks.com
+    </figcaption>
+</figure>
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/SBGC_Tiny_C_Flat_Top_legend.jpg" />
+    <figcaption>Wiring diagram for Simple BGC Tiny Rev C.</figcaption>
+</figure>
+
+| Connector Pin # | Connector Label | Device Connection       |
+|-----------------|-----------------|-------------------------|
+|               1 | 3V3             |                         |
+|               2 | 5V0             |                         |
+|               3 | SDA1            |                         |
+|               4 | 5V0             |                         |
+|               5 | SCL1            |                         |
+|               6 | GND             |                         |
+|               7 | GPIO_GCLK       |                         |
+|               8 | TXD0            | USART1_RX on SimpleBGC  |
+|               9 | GND             | GND on SimpleBGC        |
+|              10 | RXD0            | USART1_TX on SimpleBGC  |
+|              11 | GPIO_GEN0       | BCLK on Microphone      |
+|              12 | GPIO_GEN1       |                         |
+|              13 | GPIO_GEN2       |                         |
+|              14 | GND             |                         |
+|              15 | GPIO_GEN3       |                         |
+|              16 | GPIO_GEN4       |                         |
+|              17 | 3V3             | 3V on Microphone        |
+|              18 | GPIO_GEN5       |                         |
+|              19 | SPI_MOSI        |                         |
+|              20 | GND             | GND on Microphone       |
+|              21 | SPIO_MISO       |                         |
+|              22 | GPIO_GEN6       |                         |
+|              23 | SPI_SCLK        |                         |
+|              24 | SPI_CE0_N       |                         |
+|              25 | GND             |                         |
+|              26 | SPI_CE1_N       |                         |
+|              27 | ID_SD           |                         |
+|              28 | ID_SC           |                         |
+|              29 | GPIO5           |                         |
+|              30 | GND             |                         |
+|              31 | GPIO6           |                         |
+|              32 | GPIO12          |                         |
+|              33 | GPIO13          |                         |
+|              34 | GND             |                         |
+|              35 | GPIO19          | LRCL on Microphone      |
+|              36 | GPIO16          |                         |
+|              37 | GPIO26          | DOUT on Microphone      |
+|              38 | GPIO20          |                         |
+|              39 | GND             | SEL on Microphone       |
+|              40 | GPIO21          |                         |
 
 **Seal up the case and install bumpers**
 
