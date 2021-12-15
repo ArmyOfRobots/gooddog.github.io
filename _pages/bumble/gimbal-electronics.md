@@ -221,6 +221,7 @@ There are four 3D-printed plastic components to be be produced.
 
 I recommend to print it face down, with break-away support material as
 shown in the photo. This way, you have the main loops of the perimeter printed in a very strong fashion.
+Yes, it's a lot of support material and it can be annoying to remove from inside of the motor region.
 
 - Head Base
 
