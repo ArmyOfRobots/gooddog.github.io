@@ -413,7 +413,7 @@ You'll need to connect two devices to the 40-pin expansion port on the Jetson Xa
 
 | Connector Pin # | Connector Label | Device Connection       |
 |-----------------|-----------------|-------------------------|
-|               1 | 3V3             |                         |
+|               1 | 3V3             | SEL on Microphone 2     |
 |               2 | 5V0             |                         |
 |               3 | SDA1            |                         |
 |               4 | 5V0             |                         |
@@ -423,8 +423,8 @@ You'll need to connect two devices to the 40-pin expansion port on the Jetson Xa
 |               8 | TXD0            | USART1_RX on SimpleBGC  |
 |               9 | GND             | GND on SimpleBGC        |
 |              10 | RXD0            | USART1_TX on SimpleBGC  |
-|              11 | GPIO_GEN0       | BCLK on Microphone      |
-|              12 | GPIO_GEN1       |                         |
+|              11 | GPIO_GEN0       |                         |
+|              12 | GPIO_GEN1       | BCLK on Microphone      |
 |              13 | GPIO_GEN2       |                         |
 |              14 | GND             |                         |
 |              15 | GPIO_GEN3       |                         |
@@ -449,9 +449,9 @@ You'll need to connect two devices to the 40-pin expansion port on the Jetson Xa
 |              34 | GND             |                         |
 |              35 | GPIO19          | LRCL on Microphone      |
 |              36 | GPIO16          |                         |
-|              37 | GPIO26          | DOUT on Microphone      |
-|              38 | GPIO20          |                         |
-|              39 | GND             | SEL on Microphone       |
+|              37 | GPIO26          |                         |
+|              38 | GPIO20          | DOUT on Microphone      |
+|              39 | GND             | SEL on Microphone 1     |
 |              40 | GPIO21          |                         |
 
 I made the connections with a set of Molex SL crimpers as before.
