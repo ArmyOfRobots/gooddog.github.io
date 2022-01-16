@@ -11,3 +11,12 @@ categories: update
 </figure>
 
 We've built a new charging dock for the robot, with Taras H's help!
+
+The internals are pretty simple, it's just a container for a standard
+4S LifePo4 battery charger, plus some sping contacts and plates added
+to the underside of the robot.
+
+<figure>
+    <img src="{{ site.baseurl | prepend: site.url }}/images/charging_dock_design.png" />
+    <figcaption>Charging dock Fusion 360 models</figcaption>
+</figure>
