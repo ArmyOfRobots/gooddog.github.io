@@ -5,13 +5,11 @@ permalink: "bumble/"
 order: 0
 ---
 
-What is the point of GoodDog.ai?
-
----
 
 The goal of GoodDog is to build a fully end-to-end trained robot that can be a helper, pet, and companion.
 You can think of him something like [Dog from Half Life 2](https://half-life.fandom.com/wiki/Dog).
 
+---
 
 As mentioned in our [project intro](https://www.gooddog.ai//update/project-intro.html]), there has been an explosion
 of AI research, but yet very little seems to focus on actually creating a synthetic animal-like consciousness
@@ -30,6 +28,14 @@ Progress and Milestones:
    - Based on a NVIDIA Jetson Xavier dev kit
    - Ultra quiet and reliable design so you can leave it running in your house while you work
    - ROS based control package, Tensor-RT for running neural networks.
- - [Soft-actor-critic](https://spinningup.openai.com/en/latest/algorithms/sac.html) implemented and working
- - 
+ - [ROS based control node](https://github.com/GoodDogAI/bumble)
+ - [Soft-actor-critic based end-to-end training](https://github.com/GoodDogAI/rossac)
+ - [Android based Bluetooth app to send reward/punishment signals](https://github.com/GoodDogAI/rewardapp)
+ - Can follow humans around, with full end-to-end training!
+
+Next Steps:
+ - Robot to find and get to its charging dock on its own with calibrated rewards
+ - More navigation and interesting behavior
+ - Make use of audio commands
+ - Insert transformer based language model
 
