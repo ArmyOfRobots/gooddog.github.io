@@ -39,7 +39,8 @@ But this path represents the most promising one yet towards creating synthetic c
 **Next Steps:**
  - Robot to find and get to its charging dock on its own with calibrated rewards
  - Find a better way to pass in more than just the last 5 video frames for longer-range planning and rewards
- - More navigation and interesting behavior
+ - Find a way to incentivize novelty, vs just finding something interesting to stare at
+ - Collect 10x more data
  - Make use of audio commands
  - Transformer based language model
    - Connected to the audio command network
