@@ -27,7 +27,7 @@ physical world. We know it will not be easy to design the proper reward function
 vast amount of needed training data, or to more deeply explore this promising space.
 But this path represents the most promising one yet towards creating synthetic conscious entities with empathy for the common person.
 
-Progress and Milestones:
+**Progress and Milestones:**
  - [GoodDog Bumble v0.2 - assembled and working](https://github.com/GoodDogAI/bumble-hardware) 
    - 3D printed case, plus off-the-shelf parts, based on a NVIDIA Jetson Xavier dev kit
    - Ultra quiet and reliable design so you can leave it running in your house while you work
@@ -36,7 +36,7 @@ Progress and Milestones:
  - [Android based Bluetooth app to send reward/punishment signals](https://github.com/GoodDogAI/rewardapp)
  - Can follow humans around, with full end-to-end training!
 
-Next Steps:
+**Next Steps:**
  - Robot to find and get to its charging dock on its own with calibrated rewards
  - Find a better way to pass in more than just the last 5 video frames for longer-range planning and rewards
  - More navigation and interesting behavior
