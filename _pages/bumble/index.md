@@ -28,10 +28,9 @@ vast amount of needed training data, or to more deeply explore this promising sp
 But this path represents the most promising one yet towards creating synthetic conscious entities with empathy for the common person.
 
 Progress and Milestones:
- - **GoodDog Bumble v0.2 - assembled and working** 
-   - Based on a NVIDIA Jetson Xavier dev kit
+ - [GoodDog Bumble v0.2 - assembled and working](https://github.com/GoodDogAI/bumble-hardware) 
+   - 3D printed case, plus off-the-shelf parts, based on a NVIDIA Jetson Xavier dev kit
    - Ultra quiet and reliable design so you can leave it running in your house while you work
-   - ROS based control package, Tensor-RT for running neural networks.
  - [ROS based control node](https://github.com/GoodDogAI/bumble)
  - [Soft-actor-critic based end-to-end training](https://github.com/GoodDogAI/rossac)
  - [Android based Bluetooth app to send reward/punishment signals](https://github.com/GoodDogAI/rewardapp)
