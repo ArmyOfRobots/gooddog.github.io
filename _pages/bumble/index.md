@@ -1,27 +1,35 @@
 ---
 layout: page
-title:  "Bumble v0.1"
+title:  "What is GoodDog?"
 permalink: "bumble/"
 order: 0
 ---
 
-<figure>
-    <img src="{{ site.baseurl | prepend: site.url }}/images/dobby0_1.jpg" />
-    <figcaption>The first version of Bumble</figcaption>
-</figure>
+What is the point of GoodDog.ai?
 
-Bumble v0.1 is the first robot design released as part of the gooddog.ai project.
-Bumble is a three wheeled bot based around NVIDIA's Jetson Xavier Devkit. It features two hoverboard motors for a drive train, plus a small caster wheel for balance. It's meant to be easily assembled from off-the-shelf + 3D printed parts without any special equipment necessary. The total cost is under $2000, which compares quite well to commercial off the shelf solutions like [NVIDIA's Carter robot](https://docs.nvidia.com/isaac/isaac/doc/tutorials/carter_hardware.html) which cost upwards of $10,000.
+---
 
-We chose the Jetson Xavier platform because we want these bots to have the absolute highest amount of GPU and CPU available for a mobile platform, to allow running multiple state of the art networks in real-time. 
+The goal of GoodDog is to build a fully end-to-end trained robot that can be a helper, pet, and companion.
+You can think of him something like [Dog from Half Life 2](https://half-life.fandom.com/wiki/Dog).
 
-Tech Specs:
- - NVIDIA Jetson Xavier (31 TeraOps total compute)
- - ~$1,800 BOM Cost
- - 24V LiFEPO4 battery
- - 2x Hoverboard motors
- - Intel Real Sense D435i
- - Dynamixel Pan-tilt head
- 
 
- [More Information](https://jekyllrb.com/docs/pages/){:target="_blank"}
+As mentioned in our [project intro](https://www.gooddog.ai//update/project-intro.html]), there has been an explosion
+of AI research, but yet very little seems to focus on actually creating a synthetic animal-like consciousness
+that acts in the real world. As of early 2022, we have amazing image detecting neural networks acting on
+big open datasets, recent advances along the lines of GPT-3, and many more new discoveries. But really someone ought to just
+plug all those things together into a single robot entity. This is what this project aims to do.
+
+I predict that simple reinforcement learning algorithms, trained with input from the final hidden
+layers of state-of-the-art perception networks, can achieve rich and complex objectives in the 
+physical world. We know it will not be easy to design the proper reward functions, to gather the
+vast amount of needed training data, or to more deeply explore this promising space.
+However, we think that this path represents the most promising one yet towards creating synthetic conscious entities with empathy for the common person.
+
+Progress and Milestones:
+ - **GoodDog Bumble v0.2 - assembled and working** 
+   - Based on a NVIDIA Jetson Xavier dev kit
+   - Ultra quiet and reliable design so you can leave it running in your house while you work
+   - ROS based control package, Tensor-RT for running neural networks.
+ - [Soft-actor-critic](https://spinningup.openai.com/en/latest/algorithms/sac.html) implemented and working
+ - 
+
