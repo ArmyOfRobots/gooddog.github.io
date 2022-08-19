@@ -35,7 +35,8 @@ docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ --network host -it --r
 ```
 
 Note, you can also flash it on Windows, using WSL. I used an Ubuntu 20.04 WSL instance, and followed these instructions
-: https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/  to install it.
+: https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/  to install it. You may need to run the
+`usbipd wsl attach --busid x-y` command 2-3 times, and do it rapidly when the devices disconnects during the flashing process.
 
    
 7. This will flash the OS image, and then wait for you to run the `oem-config` process. You can either run this by plugging
