@@ -7,14 +7,14 @@ order: 3
 
 Once you get your NVIDIA Jetson AGX Dev Kit, you will need to setup the SDK Manager on a compatible computer,
 and then flash your Dev Kit with the latest L4T (Linux for Tegra) images. Sadly, NVIDIA is often really slow
-releasing support for new operating systems, so as of August 2021, you would need an Ubuntu 18.04 image to do the
+releasing support for new operating systems, so as of August 2022, you would need an Ubuntu 20.04 image to do the
 flashing and use the tools.
 
 Thankfully, they have a docker image that you can use for flashing. 
 Instructions based on these: https://docs.nvidia.com/sdk-manager/docker-containers/index.html
 
 1. Download the image from https://developer.nvidia.com/nvidia-sdk-manager-docker-image
-   (As of August 2021, we are using SDK Manager version 1.7, and Jetson 4.6: sdkmanager-1.7.0.8846_docker)   
+   (As of August August 2022, we are using SDK Manager version 1.8.1, and Jetson 5.0.2: sdkmanager-1.8.1.10392)   
 
 2. From a terminal, load the Docker image: 
 
@@ -31,8 +31,12 @@ Instructions based on these: https://docs.nvidia.com/sdk-manager/docker-containe
    
 6. If that checks out, then you want the latest `JETSON_AGX_XAVIER_TARGETS` as follows:
 ```shell
-docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ --network host -it --rm sdkmanager --cli install --logintype devzone --staylogin --product Jetson --version 4.6 --targetos Linux --target JETSON_AGX_XAVIER_TARGETS --flash all
+docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ --network host -it --rm sdkmanager --cli install --logintype devzone --staylogin --product Jetson --version 5.0.2 --targetos Linux --target JETSON_AGX_XAVIER_TARGETS --flash all
 ```
+
+Note, you can also flash it on Windows, using WSL. I used an Ubuntu 20.04 WSL instance, and followed these instructions
+: https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/  to install it.
+
    
 7. This will flash the OS image, and then wait for you to run the `oem-config` process. You can either run this by plugging
 in a keyboard and monitor, or by connecting to the exposed serial port: `screen /dev/ttyACM0`
