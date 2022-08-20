@@ -63,7 +63,12 @@ sudo systemctl disable containerd
 sudo systemctl disable whoopsie
 ```    
 
-11. And finally, set up a wifi connection (you'll need an M.2 Wifi module, I recommend an Intel 8265, plus an 
+11. You can also set things up for the 4 core 30W power mode, which should be more than sufficient for fast
+operation.
+`sudo nvpmodel -m 5`
+
+
+12. And finally, set up a wifi connection (you'll need an M.2 Wifi module, I recommend an Intel 8265, plus an 
     externally connected antenna.)
     
 ```shell
@@ -77,46 +82,76 @@ provided Network Manager.
 
 ---
 
-**How to set up ROS and a Catkin Workspace**
+[//]: # (**How to set up ROS and a Catkin Workspace**)
 
-1. Follow the basic instructions to set up ROS Melodic (the only supported version for Ubuntu 18.04) from the official docs:
-   1. http://wiki.ros.org/melodic/Installation/Ubuntu
-2. Create a catkin workspace with the official instructions
-   1. http://wiki.ros.org/catkin/Tutorials/create_a_workspace
-3. Be sure to source the workspace from your `~/.bashrc` file.
-4. Clone the https://github.com/GoodDogAI/bumble repo into `~/catkin_ws/src`
-5. You're going to want to install the Intel Realsense base Linux drivers, using the latest version of the library. (Not just the apt-get install version which can be out of date)
-   However, it's okay to use the user-mode UVC library.
+[//]: # ()
+[//]: # (1. Follow the basic instructions to set up ROS Melodic &#40;the only supported version for Ubuntu 18.04&#41; from the official docs:)
 
-   https://github.com/jetsonhacks/installRealSenseSDK/blob/master/installLibrealsense.sh
-6. Then, install the Intel Real Sense ROS package from source:
-https://github.com/IntelRealSense/realsense-ros#step-2-install-intel-realsense-ros-from-sources
+[//]: # (   1. http://wiki.ros.org/melodic/Installation/Ubuntu)
 
-```bash
-# You'll need libbluetooth and libgstreamer
-sudo apt install libbluetooth-dev
+[//]: # (2. Create a catkin workspace with the official instructions)
 
+[//]: # (   1. http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 
-# If you get any build errors, you'll also need some extra ros packages
-sudo apt install ros-melodic-roscpp ros-melodic-audio-common-msgs ros-melodic-cv-bridge ros-melodic-image-transport ros-melodic-tf ros-melodic-ddynamic-reconfigure ros-melodic-diagnostic-updater
-```
-Note, you will need to make a soft link from `opencv4` to `opencv` for the package to compile properly.
+[//]: # (3. Be sure to source the workspace from your `~/.bashrc` file.)
 
-```bash
-cd /usr/include
-sudo ln -s opencv4 opencv
-```
+[//]: # (4. Clone the https://github.com/GoodDogAI/bumble repo into `~/catkin_ws/src`)
 
-7. Run `catkin_make`
-8. Include a line
-```
-source /home/robot/catkin_ws/devel/setup.bash
-```
-at the bottom of your ~/.bashrc file so that your catkin workspace can be properly detected by ROS.
+[//]: # (5. You're going to want to install the Intel Realsense base Linux drivers, using the latest version of the library. &#40;Not just the apt-get install version which can be out of date&#41;)
 
-10. You should be able to start the robot with `roslaunch mainbot brain.launch`
+[//]: # (   However, it's okay to use the user-mode UVC library.)
 
----
+[//]: # ()
+[//]: # (   https://github.com/jetsonhacks/installRealSenseSDK/blob/master/installLibrealsense.sh)
+
+[//]: # (6. Then, install the Intel Real Sense ROS package from source:)
+
+[//]: # (https://github.com/IntelRealSense/realsense-ros#step-2-install-intel-realsense-ros-from-sources)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (# You'll need libbluetooth and libgstreamer)
+
+[//]: # (sudo apt install libbluetooth-dev)
+
+[//]: # ()
+[//]: # ()
+[//]: # (# If you get any build errors, you'll also need some extra ros packages)
+
+[//]: # (sudo apt install ros-melodic-roscpp ros-melodic-audio-common-msgs ros-melodic-cv-bridge ros-melodic-image-transport ros-melodic-tf ros-melodic-ddynamic-reconfigure ros-melodic-diagnostic-updater)
+
+[//]: # (```)
+
+[//]: # (Note, you will need to make a soft link from `opencv4` to `opencv` for the package to compile properly.)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (cd /usr/include)
+
+[//]: # (sudo ln -s opencv4 opencv)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (7. Run `catkin_make`)
+
+[//]: # (8. Include a line)
+
+[//]: # (```)
+
+[//]: # (source /home/robot/catkin_ws/devel/setup.bash)
+
+[//]: # (```)
+
+[//]: # (at the bottom of your ~/.bashrc file so that your catkin workspace can be properly detected by ROS.)
+
+[//]: # ()
+[//]: # (10. You should be able to start the robot with `roslaunch mainbot brain.launch`)
+
+[//]: # ()
+[//]: # (---)
 
 **How to set up connection to the Simple BGC controller**
 
