@@ -365,7 +365,7 @@ we just enabled.
 ```shell
 amixer -c tegrasndt19xmob sset "ADMAIF1 Mux" "I2S2"
 
-sudo arecord -D hw:tegrasndt19xmob,0 -r 48000 -f S32_LE -c 1 -d 10 cap.wav
+sudo arecord -D hw:APE,0 -r 48000 -f S32_LE -c 2 -d 10 cap.wav
 ```
 
 You should see a signal when you open the recorded `cap.wav` file from your home directory.
