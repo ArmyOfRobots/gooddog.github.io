@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "New Code Repo"
+date:   2022-11-02 8:03:00 -0700
+categories: update
+---
+
+Recently, we've had the chance to rewrite the bot code. Over time, it had become progressively more
+and more difficult to work with the old ROS codebase. It was bad to have the realtime code
+and the training code be in two different repos (hard to sync the vector spaces when the code is in two places and
+in two different languages). Finally, adding more training data was more likely to cause weird NaN errors rather than
+improve robot performance.
+
+[RobotAI on Github](https://github.com/GoodDogAI/robotai)
+
+There are some nice new features based on learnings in the rewrite:
+- [Cereal](https://github.com/commaai/cereal) message system, based on Capnproto, from CommaAI. 
+- MsgVec - There is one C++ class which is responsible for interfacing messages and vectors.
+  - It takes a stream of input messages, and creates a float vector for feeding into an ONNX graph.
+  - It takes an action vector from your RL output, and converts it back to messages to send out and control your robot.
+  - It works the same whether you are feeding live messages, or replaying a log
+  - Cython bindings so you can use the code in python
+- Companion web service
+  - Automatically upload log files after the robot runs
+  - Automatically download ONNX files, convert to TensorRT, validate results match between host and device
+  - Download and view logs and metadata
+- On-device video compression, based on NVIDIA libraries, allows for higher res recordings and saving space.
+- Unit test all the things, the new code is quite paranoid about making sure the inputs and outputs match between
+training and runtime. Any weirdnesses raise exceptions so that you can debug, rather than live with silent failures.
+- SAC reinforcement learning based on [Stable Baselines 3](https://stable-baselines3.readthedocs.io/en/master/) 
+- Vision model based on [YoloV7](https://github.com/WongKinYiu/yolov7) with no modifications
+- Reward calculations are a seperate, fully contained ONNX graph
+- Better config and caching to keep iteration-speeed fast
+
+
+
