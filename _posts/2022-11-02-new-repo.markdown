@@ -15,7 +15,7 @@ improve robot performance.
 
 There are some nice new features based on learnings in the rewrite:
 - [Cereal](https://github.com/commaai/cereal) message system, based on Capnproto, from CommaAI. 
-- MsgVec - There is one C++ class which is responsible for interfacing messages and vectors.
+- [MsgVec](https://github.com/GoodDogAI/robotai/tree/main/src/msgvec) - There is one C++ class which is responsible for interfacing messages and vectors.
   - It takes a stream of input messages, and creates a float vector for feeding into an ONNX graph.
   - It takes an action vector from your RL output, and converts it back to messages to send out and control your robot.
   - It works the same whether you are feeding live messages, or replaying a log
