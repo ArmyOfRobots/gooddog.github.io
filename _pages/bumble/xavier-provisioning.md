@@ -360,10 +360,13 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 Select the 40 pin header, configure for specific hardware, select your microphone, and save the changes.
 
+Note: If you are using a NileCAM21 instead of the Intel Realsense, you'll have to merge your device trees for 
+both devices to work correctly.
+
 Next, set your first audio input channel to I2S2, which is the audio connection exposed on the 40-pin header that 
 we just enabled.
 ```shell
-amixer -c tegrasndt19xmob sset "ADMAIF1 Mux" "I2S2"
+amixer -c 1 sset "ADMAIF1 Mux" "I2S2"
 
 sudo arecord -D hw:APE,0 -r 48000 -f S32_LE -c 2 -d 10 cap.wav
 ```
@@ -387,3 +390,56 @@ discoverable on
 ```
 
 Now pair your phone on your android
+
+---
+
+**How to provision the NileCAM21**
+
+As an alternative option, you can also use a NileCAM21 from e-con systems as a head camera. To get this to work, you'll
+need to do the following steps:
+
+1. Use the provided driver installation files from the NileCam21/SturdeCAM21 to install a new kernel image, and device tree overlay.
+2. If you already had run the `jetson-io.py` tool, then you'll need to edit your `/boot/extlinux/extlinux.conf` file to set the primary
+boot option to be the default again. (This will load the device-tree provided by the NileCam drivers)
+3. Make a copy of the dtb files in `/boot/dtb`
+3. Decompile the e-con systems provided dtb file:` dtc -I dtb -O dts kernel_tegra194-p2888-0001-p2822-0000.dtb > kernel_tegra194-p2888-0001-p2822-0000.dts`
+5. You'll need to manually merge in the pinmux settings for i2s audio on the 40-pin connectors as below.
+```
+       pinmux@2430000 {
+                pinctrl-0 = <&{/pinmux@2430000/exp-header-pinmux}>;
+                pinctrl-names = "default";
+
+                compatible = "nvidia,tegra194-pinmux";
+                reg = <0x00 0x2430000 0x00 0x17000 0x00 0xc300000 0x00 0x4000>;
+                status = "okay";
+                phandle = <0x2ae>;
+
+                exp-header-pinmux {
+                        hdr40-pin38 {
+                                nvidia,enable-input = <0x01>;
+                                nvidia,tristate = <0x01>;
+                                nvidia,pull = <0x01>;
+                                nvidia,function = "i2s2";
+                                nvidia,pins = "dap2_din_pi1";
+                        };
+
+                        hdr40-pin35 {
+                                nvidia,enable-input = <0x01>;
+                                nvidia,tristate = <0x00>;
+                                nvidia,pull = <0x01>;
+                                nvidia,function = "i2s2";
+                                nvidia,pins = "dap2_fs_pi2";
+                        };
+
+                        hdr40-pin12 {
+                                nvidia,enable-input = <0x01>;
+                                nvidia,tristate = <0x00>;
+                                nvidia,pull = <0x01>;
+                                nvidia,function = "i2s2";
+                                nvidia,pins = "dap2_sclk_ph7";
+                        };
+                };
+```
+6. Recompile the dtb file
+`dtc -O dtb -o kernel_tegra194-p2888-0001-p2822-0000-user.dtb kernel_tegra194-p2888-0001-p2822-0000-user.dts`
+7. Make sure the `/boot/extlinux/extlinux.conf` points to your modified dtb.

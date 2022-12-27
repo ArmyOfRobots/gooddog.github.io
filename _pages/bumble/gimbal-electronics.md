@@ -30,6 +30,14 @@ The tilt motor in this configuration is in an unstable equilibrium, and in fact,
 when the angle is greater than zero. However, in a practical setting, this is ~350ma at most at the largest angles, and there are
 mechanical endstops to prevent it from tilting so far that it can't return back to center under motor power.
 
+**Update Dec 2022**: I ended up swapping the RealSense for a [NileCAM21](https://www.e-consystems.com/nvidia-cameras/jetson-agx-xavier-cameras/ar0233-gmsl2-camera.asp).
+The RealSense has a number of issues, including very bad performance in sunlight (everything turns purple and blurs),
+and bad performance in low light (like a very old digital camera), and the USB connectivity was difficult to deal with.
+The NileCAM21 is decent on those fronts, and uses FAKRA coax connectors, letting you use a thin and flexible cable.
+
+Everything else in the design has stayed the same, but I have a modified version of the head piece which can mount the 
+new camera.
+
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RptVgsv7DTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
